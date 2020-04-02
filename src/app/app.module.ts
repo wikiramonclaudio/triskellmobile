@@ -10,6 +10,7 @@ import { HomeComponent } from '@src/app/home/home.component';
 import {CheckboxModule} from 'primeng/checkbox';
 import {CalendarModule} from 'primeng/calendar';
 
+import {MatButtonModule} from '@angular/material/button';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import {CalendarModule} from 'primeng/calendar';
     AppRoutingModule,
     CheckboxModule,
     CalendarModule,
-    FormsModule
+    FormsModule,
+    MatButtonModule
   ],
   providers: [],
   bootstrap: [AppComponent]
