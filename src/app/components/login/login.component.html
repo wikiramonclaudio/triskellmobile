@@ -1,13 +1,22 @@
-<div class="ui-inputgroup d-flex flex-column justify-content-center">
-    <span class="ui-float-label">
-        <input id="float-input" required type="text" size="30" pInputText>
-        <label for="float-input">Username</label>
-    </span>
 
-    <span class="ui-float-label">
-        <input id="float-input1" required type="text" size="30" pInputText>
-        <label for="float-input1">Password</label>
-    </span>
+<div class="flex-centered">
 
-    <button pButton type="button" (click)="login()"  class="ui-button-raised ui-button-rounded">Login</button>
+    <div class="ui-g ui-fluid">
+        <div class="ui-g-12 ui-md-8 ui-md-offset-2 ui-lg-6 ui-lg-offset-4">
+            <div class="ui-inputgroup">
+                <span class="ui-inputgroup-addon"><i class="pi pi-user" style="line-height: 1.25;"></i></span>
+                <input type="text" required pInputText placeholder="Username">         
+            </div>
+        </div>
+        <div class="ui-g-12 ui-md-8 ui-md-offset-2 ui-lg-6 ui-lg-offset-4">
+            <div class="ui-inputgroup">
+                <span class="ui-inputgroup-addon"><i class="pi pi-lock" style="line-height: 1.25;"></i></span>
+                <input type="text" required pInputText placeholder="Password">         
+            </div>
+        </div>
+        <div class="ui-g-12 ui-md-8 ui-md-offset-2 ui-lg-6 ui-lg-offset-4">
+                <button pButton type="button" (click)="login()" label="Login"></button>     
+        </div>
+    </div>
+
 </div>
