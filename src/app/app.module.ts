@@ -18,6 +18,8 @@ import { LoginComponent } from '@src/app/components/login/login.component';
 import { MainSidebarComponent } from '@src/app/components/main-sidebar/main-sidebar.component';
 import { TopNavbarComponent } from '@src/app/components/top-navbar/top-navbar.component';
 import {SidebarModule} from 'primeng/sidebar';
+
+import {ToolbarModule} from 'primeng/toolbar';
 @NgModule({
   declarations: [
     AppComponent,
@@ -36,7 +38,8 @@ import {SidebarModule} from 'primeng/sidebar';
     MatButtonModule,
     InputTextModule,
     ButtonModule,
-    SidebarModule
+    SidebarModule,
+    ToolbarModule
   ],
   providers: [],
   bootstrap: [AppComponent]

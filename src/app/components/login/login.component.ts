@@ -13,6 +13,9 @@ export class LoginComponent implements OnInit {
   ) { }
 
   ngOnInit() {
+    //add class to login's html tag
+    var htmlTag = document.querySelector('html');
+    htmlTag.classList.add('loginPage');
   }
 
   login(){

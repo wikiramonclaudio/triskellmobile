@@ -6,7 +6,51 @@
 // prime ng styles
 
 
+// css variables
+$small : 40em;
+$medium : 40.063em;
+$large : 64.063em;
+$extralarge : 90.063em;
+
+:root {
+    --orange-logo : #F37916;
+    --gray-logo: #3F3F3F;
+}
+.loginPage {
+    background: url(https://images.unsplash.com/photo-1549449274-79d17de85c94?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2734&q=80) no-repeat center center fixed; 
+    background-size: cover;
+    background-blend-mode: color-dodge;
+    background-color: #9a9494;
+
+    @media (min-width: $medium) {
+        background: url(https://images.unsplash.com/photo-1517803833002-76fe44a2de2f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1500&q=80) no-repeat center center fixed;
+        background-size: cover;
+        background-blend-mode: color-dodge;
+        background-color: #9a9494;
+    }
+}
+
 body {
     margin:0;
-    height: 100vh;
+    min-height: 100%;
 }
+
+body .ui-button {
+    background-color: var(--orange-logo) !important;
+    border-color: var(--orange-logo)  !important;
+}
+
+//Media query examples
+/*@media (max-width: $small) {
+    
+}
+@media (min-width: $medium) {
+    
+}
+@media (min-width: $large) {
+    
+}
+@media (min-width: $extralarge) {
+    
+}
+*/

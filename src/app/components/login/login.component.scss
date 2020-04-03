@@ -4,3 +4,15 @@
     justify-content: center;
     height: 90vh;
 }
+svg {
+    width: 60%;
+    margin-bottom: 2rem;
+    @media (min-width: 40.063em) {
+        width: auto;
+        margin-bottom: 1rem;
+    }
+}
+
+
+
+
