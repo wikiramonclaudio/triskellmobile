@@ -26,7 +26,7 @@ import {ToolbarModule} from 'primeng/toolbar';
     HomeComponent,
     LoginComponent,
     MainSidebarComponent,
-    TopNavbarComponent
+    TopNavbarComponent    
   ],
   imports: [
     BrowserModule,

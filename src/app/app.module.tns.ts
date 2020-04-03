@@ -8,6 +8,7 @@ import { LoginComponent } from '@src/app/components/login/login.component';
 import { PreferencesComponent } from '@src/app/pages/preferences/preferences.component';
 import { MainSidebarComponent } from '@src/app/components/main-sidebar/main-sidebar.component';
 import { TopNavbarComponent } from '@src/app/components/top-navbar/top-navbar.component';
+import { SchedulerComponent } from '@src/app/pages/scheduler/scheduler.component';
 
 
 // Uncomment and add to NgModule imports if you need to use two-way binding
@@ -23,6 +24,7 @@ import { TopNavbarComponent } from '@src/app/components/top-navbar/top-navbar.co
     LoginComponent,
     MainSidebarComponent,
     TopNavbarComponent,
+    SchedulerComponent,
     // PreferencesComponent,
   ],
   imports: [
