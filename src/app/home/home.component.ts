@@ -15,5 +15,7 @@ export class HomeComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+    var htmlTag = document.querySelector('html');
+    htmlTag.classList.remove('loginPage');
   }
 }

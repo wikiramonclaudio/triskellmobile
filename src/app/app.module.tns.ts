@@ -9,6 +9,10 @@ import { PreferencesComponent } from '@src/app/pages/preferences/preferences.com
 import { MainSidebarComponent } from '@src/app/components/main-sidebar/main-sidebar.component';
 import { TopNavbarComponent } from '@src/app/components/top-navbar/top-navbar.component';
 import { SchedulerComponent } from '@src/app/pages/scheduler/scheduler.component';
+import { ChartComponent } from '@src/app/components/chart/chart.component';
+import { BarChartDemoComponent } from '@src/app/components/bar-chart-demo/bar-chart-demo.component';
+import { LineComponent } from '@src/app/components/line/line.component';
+import { PieChartComponent } from '@src/app/components/pie-chart/pie-chart.component';
 
 
 // Uncomment and add to NgModule imports if you need to use two-way binding
@@ -25,6 +29,10 @@ import { SchedulerComponent } from '@src/app/pages/scheduler/scheduler.component
     MainSidebarComponent,
     TopNavbarComponent,
     SchedulerComponent,
+    ChartComponent,
+    BarChartDemoComponent,
+    LineComponent,
+    PieChartComponent,
     // PreferencesComponent,
   ],
   imports: [

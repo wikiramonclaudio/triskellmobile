@@ -20,13 +20,25 @@ import { TopNavbarComponent } from '@src/app/components/top-navbar/top-navbar.co
 import {SidebarModule} from 'primeng/sidebar';
 
 import {ToolbarModule} from 'primeng/toolbar';
+import { ChartComponent } from '@src/app/components/chart/chart.component';
+
+import {ChartModule} from 'primeng/chart';
+import { BarChartDemoComponent } from '@src/app/components/bar-chart-demo/bar-chart-demo.component';
+import { LineComponent } from '@src/app/components/line/line.component';
+import {ToastModule} from 'primeng/toast';
+import { PieChartComponent } from '@src/app/components/pie-chart/pie-chart.component';
+
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     LoginComponent,
     MainSidebarComponent,
-    TopNavbarComponent
+    TopNavbarComponent,
+    ChartComponent,
+    BarChartDemoComponent,
+    LineComponent,
+    PieChartComponent
   ],
   imports: [
     BrowserModule,
@@ -39,7 +51,9 @@ import {ToolbarModule} from 'primeng/toolbar';
     InputTextModule,
     ButtonModule,
     SidebarModule,
-    ToolbarModule
+    ToolbarModule,
+    ChartModule,
+    ToastModule
   ],
   providers: [],
   bootstrap: [AppComponent]
