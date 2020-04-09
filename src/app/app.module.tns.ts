@@ -13,6 +13,7 @@ import { ChartComponent } from '@src/app/components/chart/chart.component';
 import { BarChartDemoComponent } from '@src/app/components/bar-chart-demo/bar-chart-demo.component';
 import { LineComponent } from '@src/app/components/line/line.component';
 import { PieChartComponent } from '@src/app/components/pie-chart/pie-chart.component';
+import { DashboardComponent } from '@src/app/pages/dashboard/dashboard.component';
 
 
 // Uncomment and add to NgModule imports if you need to use two-way binding
@@ -33,6 +34,7 @@ import { PieChartComponent } from '@src/app/components/pie-chart/pie-chart.compo
     BarChartDemoComponent,
     LineComponent,
     PieChartComponent,
+    DashboardComponent,
     // PreferencesComponent,
   ],
   imports: [

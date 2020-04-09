@@ -1,3 +1,4 @@
+import { MbscModule } from '@mobiscroll/angular';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -20,13 +21,9 @@ import { TopNavbarComponent } from '@src/app/components/top-navbar/top-navbar.co
 import {SidebarModule} from 'primeng/sidebar';
 
 import {ToolbarModule} from 'primeng/toolbar';
-import { ChartComponent } from '@src/app/components/chart/chart.component';
 
 import {ChartModule} from 'primeng/chart';
-import { BarChartDemoComponent } from '@src/app/components/bar-chart-demo/bar-chart-demo.component';
-import { LineComponent } from '@src/app/components/line/line.component';
 import {ToastModule} from 'primeng/toast';
-import { PieChartComponent } from '@src/app/components/pie-chart/pie-chart.component';
 
 @NgModule({
   declarations: [
@@ -34,13 +31,10 @@ import { PieChartComponent } from '@src/app/components/pie-chart/pie-chart.compo
     HomeComponent,
     LoginComponent,
     MainSidebarComponent,
-    TopNavbarComponent,
-    ChartComponent,
-    BarChartDemoComponent,
-    LineComponent,
-    PieChartComponent
+    TopNavbarComponent
   ],
-  imports: [
+  imports: [ 
+    MbscModule,  
     BrowserModule,
     BrowserAnimationsModule,
     AppRoutingModule,

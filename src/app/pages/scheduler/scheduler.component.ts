@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
+// import { MbscEventcalendarOptions } from '@mobiscroll/angular';
+import { mobiscroll, MbscEventcalendarOptions, MbscRangeOptions, MbscFormOptions, MbscEventcalendar, MbscPopupOptions } from '@mobiscroll/angular';
 
 @Component({
   selector: 'app-scheduler',
@@ -6,55 +9,90 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./scheduler.component.scss']
 })
 export class SchedulerComponent implements OnInit {
-  constructor() { }
-  date: any = new jqx.date(2020, 11, 23);
+  events: any;
 
-  source: any =
-    {
-      dataType: 'json',
-      dataFields: [
-        { name: 'id', type: 'string' },
-        { name: 'status', type: 'string' },
-        { name: 'about', type: 'string' },
-        { name: 'address', type: 'string' },
-        { name: 'company', type: 'string' },
-        { name: 'name', type: 'string' },
-        { name: 'style', type: 'string' },
-        { name: 'calendar', type: 'string' },
-        { name: 'start', type: 'date', format: 'yyyy-MM-dd HH:mm' },
-        { name: 'end', type: 'date', format: 'yyyy-MM-dd HH:mm' }
-      ],
-      id: 'id',
-      localData: this.generateAppointments()
-      // url: './../../../sampledata/appointments.txt'
-    };
-  dataAdapter: any = new jqx.dataAdapter(this.source);
-  resources: any =
-    {
-        colorScheme: 'scheme05',
-        dataField: 'calendar',
-        source: new jqx.dataAdapter(this.source)
-    };
-  appointmentDataFields: any =
-    {
-      from: 'start',
-      to: 'end',
-      id: 'id',
-      description: 'about',
-      location: 'address',
-      subject: 'name',
-      style: 'style',
-      status: 'status'
-    };
-  views: any[] =
-    [
-      'dayView',
-      'weekView',
-      'monthView',
-      'agendaView'
-    ];
+  eventSettings: MbscEventcalendarOptions = {
+    theme: 'ios',
+    themeVariant: 'light',
+    display: 'inline',
+    calendarHeight: 513,
+    view: {
+      calendar: {
+        labels: true,
+        popover: true
+      }
+    }
+  };
+
+  // let preventSet = false;
+  // let id = 5;
+
+  now:any = new Date();
+  btn = '<button class="mbsc-btn mbsc-btn-outline mbsc-btn-danger md-delete-btn mbsc-ios">Delete</button>';
+  allDay = false;
+  eventDate;
+  // eventDate = [now, new Date(now.getFullYear(), now.getMonth(), now.getDate(), now.getHours() + 2)];
+  isFree = 'busy';
+  eventText = '';
+  eventDesc = '';
+  control: string [];
+  wheels: string;
+
+  // date: any = new jqx.date(2020, 11, 23);
+
+  // source: any =
+  //   {
+  //     dataType: 'json',
+  //     dataFields: [
+  //       { name: 'id', type: 'string' },
+  //       { name: 'status', type: 'string' },
+  //       { name: 'about', type: 'string' },
+  //       { name: 'address', type: 'string' },
+  //       { name: 'company', type: 'string' },
+  //       { name: 'name', type: 'string' },
+  //       { name: 'style', type: 'string' },
+  //       { name: 'calendar', type: 'string' },
+  //       { name: 'start', type: 'date', format: 'yyyy-MM-dd HH:mm' },
+  //       { name: 'end', type: 'date', format: 'yyyy-MM-dd HH:mm' }
+  //     ],
+  //     id: 'id',
+  //     localData: this.generateAppointments()
+  //     // url: './../../../sampledata/appointments.txt'
+  //   };
+  // dataAdapter: any = new jqx.dataAdapter(this.source);
+  // resources: any =
+  //   {
+  //     colorScheme: 'scheme05',
+  //     dataField: 'calendar',
+  //     source: new jqx.dataAdapter(this.source)
+  //   };
+  // appointmentDataFields: any =
+  //   {
+  //     from: 'start',
+  //     to: 'end',
+  //     id: 'id',
+  //     description: 'about',
+  //     location: 'address',
+  //     subject: 'name',
+  //     style: 'style',
+  //     status: 'status'
+  //   };
+  // views: any[] =
+  //   [
+  //     'dayView',
+  //     'weekView',
+  //     'monthView',
+  //     'agendaView'
+  //   ];
+
+  constructor(
+    private httpService: HttpClient
+  ) {}
 
   ngOnInit() {
+    this.httpService.jsonp('https://trial.mobiscroll.com/events/', 'callback').subscribe((resp: any) => {
+      this.events = resp;
+    });
   }
   getWidth(): any {
     if (document.body.offsetWidth < 850) {

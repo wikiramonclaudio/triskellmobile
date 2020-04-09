@@ -1,6 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import {CheckboxModule} from 'primeng/checkbox';
-import {CalendarModule} from 'primeng/calendar';
 // import {CheckboxModule} from 'pr'
 declare var $;
 @Component({
@@ -15,7 +13,6 @@ export class HomeComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
-    var htmlTag = document.querySelector('html');
-    htmlTag.classList.remove('loginPage');
+   
   }
 }

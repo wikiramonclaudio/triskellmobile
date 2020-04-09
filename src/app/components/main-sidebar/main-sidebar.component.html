@@ -1,22 +1,24 @@
 <p-sidebar [(visible)]="visibleSidebar1" [baseZIndex]="10000">
     <!-- <h1 style="font-weight:normal">Left Sidebar</h1> -->
-    <ul class="d-flex flex-column justify-content-center align-items-start pl-0">
+    <div class="d-flex flex-column justify-content-center align-items-start pl-0">
+        <a class="mt-2" [routerLink]="['/home']">Dashboard</a>
         <a class="mt-2" [routerLink]="['/home/scheduler']">Calendar</a>
+        <a class="mt-2" [routerLink]="['/home/preferences']">Preferences</a>
         <a class="mt-2" [routerLink]="['/login']">Salir</a>
         <!-- <button pButton type="button" (click)="visibleSidebar1 = false" label="Save" class="ui-button-success"></button>
         <button pButton type="button" (click)="visibleSidebar1 = false" label="Cancel" class="ui-button-secondary"></button> -->
-    </ul>
+    </div>
 </p-sidebar>
 
 <p-toolbar>
     <div class="ui-toolbar-group-left">
-        <button pButton type="button" label="Open" icon="pi pi-plus" (click)="toggleSidebar()"></button>                  
+        <button pButton type="button" icon="pi pi-bars" (click)="toggleSidebar()"></button>                  
     </div>
     
     <div class="ui-toolbar-group-right">
-        <button pButton type="button" icon="pi pi-search"></button>
+        <!-- <button pButton type="button" icon="pi pi-search"></button>
         <button pButton type="button" icon="pi pi-calendar" class="ui-button-success"></button>
-        <button pButton type="button" icon="pi pi-times" class="ui-button-danger"></button>
+        <button pButton type="button" icon="pi pi-times" class="ui-button-danger"></button> -->
     </div>
 </p-toolbar>
 
