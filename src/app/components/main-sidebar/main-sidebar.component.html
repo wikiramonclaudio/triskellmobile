@@ -1,10 +1,10 @@
 <p-sidebar [(visible)]="visibleSidebar1" [baseZIndex]="10000">
     <!-- <h1 style="font-weight:normal">Left Sidebar</h1> -->
     <div class="d-flex flex-column justify-content-center align-items-start pl-0">
-        <a class="mt-2" [routerLink]="['/home']">Dashboard</a>
-        <a class="mt-2" [routerLink]="['/home/scheduler']">Calendar</a>
-        <a class="mt-2" [routerLink]="['/home/preferences']">Preferences</a>
-        <a class="mt-2" [routerLink]="['/login']">Salir</a>
+        <a (click)="toggleSidebar()"  class="mt-2" [routerLink]="['/home']">Dashboard</a>
+        <a (click)="toggleSidebar()"  class="mt-2" [routerLink]="['/home/scheduler']">Calendar</a>
+        <a (click)="toggleSidebar()"  class="mt-2" [routerLink]="['/home/preferences']">Preferences</a>
+        <a (click)="toggleSidebar()"  class="mt-2" [routerLink]="['/login']">Salir</a>
         <!-- <button pButton type="button" (click)="visibleSidebar1 = false" label="Save" class="ui-button-success"></button>
         <button pButton type="button" (click)="visibleSidebar1 = false" label="Cancel" class="ui-button-secondary"></button> -->
     </div>

@@ -28,6 +28,14 @@ import { BreadCrumbsComponent } from '@src/app/components/bread-crumbs/bread-cru
 import {BreadcrumbModule} from 'primeng/breadcrumb';
 import {MenuItem} from 'primeng/api';
 
+import {HttpClientModule, HttpClient} from '@angular/common/http';
+import {TranslateModule, TranslateLoader} from '@ngx-translate/core';
+import {TranslateHttpLoader} from '@ngx-translate/http-loader';
+
+export function HttpLoaderFactory(http: HttpClient) {
+  return new TranslateHttpLoader(http);
+}
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -38,7 +46,7 @@ import {MenuItem} from 'primeng/api';
     BreadCrumbsComponent
   ],
   imports: [ 
-    MbscModule,  
+    MbscModule,
     BrowserModule,
     BrowserAnimationsModule,
     AppRoutingModule,
@@ -52,8 +60,15 @@ import {MenuItem} from 'primeng/api';
     ToolbarModule,
     ChartModule,
     ToastModule,
-    BreadcrumbModule
-    
+    BreadcrumbModule,
+    HttpClientModule,
+    TranslateModule.forRoot({
+      loader: {
+        provide: TranslateLoader,
+        useFactory: HttpLoaderFactory,
+        deps: [ HttpClient ]
+      }
+    })
   ],
   providers: [],
   bootstrap: [AppComponent]

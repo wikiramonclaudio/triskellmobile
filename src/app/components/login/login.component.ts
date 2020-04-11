@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-
+import { TranslateService } from '@ngx-translate/core';
+import { TranslationService } from './../../services/translation.service';
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
@@ -8,11 +9,14 @@ import { Router } from '@angular/router';
 })
 export class LoginComponent implements OnInit {
 
+  translate: TranslateService;
   constructor(
-    private router: Router
+    private router: Router,
+    public translationService: TranslationService
   ) { }
 
   ngOnInit() {
+    this.translate = this.translationService.getTranslateService();
     //add class to login's html tag
     var htmlTag = document.querySelector('html');
     htmlTag.classList.add('loginPage');
