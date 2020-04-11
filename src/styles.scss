@@ -40,7 +40,11 @@ body .ui-button {
     background-color: var(--orange-logo) !important;
     border-color: var(--orange-logo)  !important;
 }
-
+.ui-toolbar button + svg {
+    width: 100px;
+    margin-left: 8px;
+    cursor: pointer;
+}
 //Media query examples
 /*@media (max-width: $small) {
     
