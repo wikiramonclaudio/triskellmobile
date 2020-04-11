@@ -21,6 +21,9 @@ import { BarChartDemoComponent } from '@src/app/components/bar-chart-demo/bar-ch
 import { LineComponent } from '@src/app/components/line/line.component';
 import { PieChartComponent } from '@src/app/components/pie-chart/pie-chart.component';
 
+import {BreadcrumbModule} from 'primeng/breadcrumb';
+//import {MenuItem} from 'primeng/api';
+
 @NgModule({
   declarations: [
     PreferencesComponent,
@@ -40,7 +43,9 @@ import { PieChartComponent } from '@src/app/components/pie-chart/pie-chart.compo
     ContentRoutingModule,
     jqxSchedulerModule,
     MbscModule,
-    ChartModule
+    ChartModule,
+    BreadcrumbModule,
+    
   ]
 })
 export class ContentModule { }

@@ -6,9 +6,9 @@ import { Routes, RouterModule } from '@angular/router';
 
 // rutas del modulo content
 const routes: Routes = [
-  { path : '', component: DashboardComponent },
-  { path : 'preferences', component: PreferencesComponent },
-  { path : 'scheduler', component: SchedulerComponent },
+  { path : '', component: DashboardComponent, data: { title: 'Dashboard'} },
+  { path : 'preferences', component: PreferencesComponent, data: { title: 'Preferences'} },
+  { path : 'scheduler', component: SchedulerComponent, data: { title: 'Scheduler'} },
   // { path : 'grid', component: PreferencesComponent },
   // { path : 'kanban', component: PreferencesComponent },
   // { path : 'scrum', component: PreferencesComponent }

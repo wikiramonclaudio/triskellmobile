@@ -24,6 +24,9 @@ import {ToolbarModule} from 'primeng/toolbar';
 
 import {ChartModule} from 'primeng/chart';
 import {ToastModule} from 'primeng/toast';
+import { BreadCrumbsComponent } from '@src/app/components/bread-crumbs/bread-crumbs.component';
+import {BreadcrumbModule} from 'primeng/breadcrumb';
+import {MenuItem} from 'primeng/api';
 
 @NgModule({
   declarations: [
@@ -31,7 +34,8 @@ import {ToastModule} from 'primeng/toast';
     HomeComponent,
     LoginComponent,
     MainSidebarComponent,
-    TopNavbarComponent
+    TopNavbarComponent,
+    BreadCrumbsComponent
   ],
   imports: [ 
     MbscModule,  
@@ -47,7 +51,9 @@ import {ToastModule} from 'primeng/toast';
     SidebarModule,
     ToolbarModule,
     ChartModule,
-    ToastModule
+    ToastModule,
+    BreadcrumbModule
+    
   ],
   providers: [],
   bootstrap: [AppComponent]

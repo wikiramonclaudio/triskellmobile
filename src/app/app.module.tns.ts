@@ -14,6 +14,7 @@ import { BarChartDemoComponent } from '@src/app/components/bar-chart-demo/bar-ch
 import { LineComponent } from '@src/app/components/line/line.component';
 import { PieChartComponent } from '@src/app/components/pie-chart/pie-chart.component';
 import { DashboardComponent } from '@src/app/pages/dashboard/dashboard.component';
+import { BreadCrumbsComponent } from '@src/app/components/bread-crumbs/bread-crumbs.component';
 
 
 // Uncomment and add to NgModule imports if you need to use two-way binding
@@ -35,6 +36,7 @@ import { DashboardComponent } from '@src/app/pages/dashboard/dashboard.component
     LineComponent,
     PieChartComponent,
     DashboardComponent,
+    BreadCrumbsComponent,
     // PreferencesComponent,
   ],
   imports: [
