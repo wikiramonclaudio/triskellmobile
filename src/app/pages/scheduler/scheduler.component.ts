@@ -24,6 +24,9 @@ export class SchedulerComponent implements OnInit {
     }
   };
 
+  popupSettings = {};
+  rangeSettings = {};
+
   // let preventSet = false;
   // let id = 5;
 
@@ -165,6 +168,10 @@ export class SchedulerComponent implements OnInit {
     appointments.push(appointment5);
     appointments.push(appointment6);
     return appointments;
+  }
+
+  change(){
+    
   }
 
 }

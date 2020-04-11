@@ -5,7 +5,7 @@ import { CommonModule } from '@angular/common';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { jqxSchedulerModule } from 'jqwidgets-ng/jqxscheduler';
-import { HttpClientModule, HttpClientJsonpModule } from '@angular/common/http';
+import { HttpClientModule, HttpClientJsonpModule, HttpClient } from '@angular/common/http';
 
 import {CheckboxModule} from 'primeng/checkbox';
 import {CalendarModule} from 'primeng/calendar';
@@ -25,7 +25,7 @@ import { PieChartComponent } from '@src/app/components/pie-chart/pie-chart.compo
   declarations: [
     PreferencesComponent,
     SchedulerComponent,
-    DashboardComponent,    
+    DashboardComponent,
     ChartComponent,
     BarChartDemoComponent,
     LineComponent,
