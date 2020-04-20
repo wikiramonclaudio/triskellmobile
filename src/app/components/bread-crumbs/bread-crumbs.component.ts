@@ -12,7 +12,7 @@ import { filter, map } from 'rxjs/operators';
 })
 export class BreadCrumbsComponent implements OnInit {
   private items: any[];
-  private titleVariable :string;
+  private titleVariable: string;
 
   constructor(
     private router: Router
@@ -20,23 +20,17 @@ export class BreadCrumbsComponent implements OnInit {
     this.getRouteData().subscribe(
       data => {
         this.titleVariable = data.title;
+        this.items = [
+          {label : 'Pimientoolbar'},
+          {label : this.titleVariable}
+        ];
       }
-    )
+    );
   }
 
   ngOnInit() {
-    this.items = [
-      {label : this.titleVariable}
-      // { label: 'Categories' },
-      // { label: 'Sports' },
-      // { label: 'Football' },
-      // { label: 'Countries' },
-      // { label: 'Spain' },
-      // { label: 'F.C. Barcelona' },
-      // { label: 'Squad' },
-      // { label: 'Lionel Messi', url: 'https://en.wikipedia.org/wiki/Lionel_Messi' }
-    ];
   }
+
   getRouteData() {
     return this.router.events
       .pipe(
