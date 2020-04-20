@@ -1,5 +1,9 @@
 <p-sidebar [(visible)]="visibleSidebar1" [baseZIndex]="10000">
     <!-- <h1 style="font-weight:normal">Left Sidebar</h1> -->
+    <div>
+        <p-megaMenu [model]="items" orientation="vertical"></p-megaMenu>
+    </div>
+    
     <div class="d-flex flex-column justify-content-center align-items-start pl-0">
         <a (click)="toggleSidebar()"  class="mt-2" [routerLink]="['/home']">Dashboard</a>
         <a (click)="toggleSidebar()"  class="mt-2" [routerLink]="['/home/scheduler']">Calendar</a>
@@ -69,15 +73,6 @@
     </div>
     
     <div class="ui-toolbar-group-right">
-        <!-- <button pButton type="button" icon="pi pi-search"></button>
-        <button pButton type="button" icon="pi pi-calendar" class="ui-button-success"></button>
-        <button pButton type="button" icon="pi pi-times" class="ui-button-danger"></button> -->
+        <app-menubar></app-menubar>
     </div>
 </p-toolbar>
-
-
-<div class="ui-g ui-fluid">
-    <div class="ui-g-12">
-    
-    </div>
-</div>

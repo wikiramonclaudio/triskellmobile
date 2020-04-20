@@ -24,13 +24,20 @@ import {ToolbarModule} from 'primeng/toolbar';
 
 import {ChartModule} from 'primeng/chart';
 import {ToastModule} from 'primeng/toast';
+import {MenubarModule} from 'primeng/menubar';
 import { BreadCrumbsComponent } from '@src/app/components/bread-crumbs/bread-crumbs.component';
 import {BreadcrumbModule} from 'primeng/breadcrumb';
-import {MenuItem} from 'primeng/api';
+
 
 import {HttpClientModule, HttpClient} from '@angular/common/http';
 import {TranslateModule, TranslateLoader} from '@ngx-translate/core';
 import {TranslateHttpLoader} from '@ngx-translate/http-loader';
+
+import { ToolbarComponent } from '@src/app/components/toolbar/toolbar.component';
+import { MenubarComponent } from '@src/app/components/menubar/menubar.component';
+
+import {MegaMenuModule} from 'primeng/megamenu';
+
 
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http);
@@ -43,7 +50,9 @@ export function HttpLoaderFactory(http: HttpClient) {
     LoginComponent,
     MainSidebarComponent,
     TopNavbarComponent,
-    BreadCrumbsComponent
+    BreadCrumbsComponent,
+    ToolbarComponent,
+    MenubarComponent
   ],
   imports: [ 
     MbscModule,
@@ -62,6 +71,8 @@ export function HttpLoaderFactory(http: HttpClient) {
     ToastModule,
     BreadcrumbModule,
     HttpClientModule,
+    MenubarModule,
+    MegaMenuModule,
     TranslateModule.forRoot({
       loader: {
         provide: TranslateLoader,

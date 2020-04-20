@@ -22,6 +22,8 @@ import { LineComponent } from '@src/app/components/line/line.component';
 import { PieChartComponent } from '@src/app/components/pie-chart/pie-chart.component';
 
 import {BreadcrumbModule} from 'primeng/breadcrumb';
+
+import {MegaMenuModule} from 'primeng/megamenu'
 //import {MenuItem} from 'primeng/api';
 
 @NgModule({
@@ -45,6 +47,7 @@ import {BreadcrumbModule} from 'primeng/breadcrumb';
     MbscModule,
     ChartModule,
     BreadcrumbModule,
+    MegaMenuModule
     
   ]
 })

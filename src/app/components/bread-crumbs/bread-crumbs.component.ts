@@ -19,8 +19,7 @@ export class BreadCrumbsComponent implements OnInit {
   ) {
     this.getRouteData().subscribe(
       data => {
-        console.log('Loe está pillando ?')
-        this.titleVariable = data.title
+        this.titleVariable = data.title;
       }
     )
   }
