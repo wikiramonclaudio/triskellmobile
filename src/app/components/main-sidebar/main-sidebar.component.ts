@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { TranslateService } from '@ngx-translate/core';
+import { TranslationService } from './../../services/translation.service';
 declare var $;
 @Component({
   selector: 'app-tk-sidebar',
@@ -8,13 +10,16 @@ declare var $;
 export class MainSidebarComponent implements OnInit {
   visibleSidebar1 = false;
   items:  any [];
-
-  constructor() { }
+  translate: TranslateService;
+  constructor(
+    public translationService: TranslationService
+  ) { }
 
   ngOnInit() {
+    this.translate = this.translationService.getTranslateService();
     this.items = [
       {
-          label: 'Project', icon: 'pi pi-fw pi-video',
+          label: this.translate.instant('main-menu-project'), icon: 'pi pi-fw pi-video',
           items: [
               [
                   {

@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { TranslateService } from '@ngx-translate/core';
+import { TranslationService } from './../../services/translation.service';
+
 
 @Component({
   selector: 'app-menubar',
@@ -7,86 +10,66 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MenubarComponent implements OnInit {
   // items: MenuItem[];
- items: any[];
-  constructor() { }
+  items: any[];
+  translate: TranslateService;
+  constructor(
+    public translationService: TranslationService
+  ) { }
 
   ngOnInit() {
+    this.translate = this.translationService.getTranslateService();
     this.items = [
       {
-          label: 'File',
-          icon: 'pi pi-fw pi-file',
-          items: [{
-                  label: 'New', 
-                  icon: 'pi pi-fw pi-plus',
-                  items: [
-                      {label: 'Project'},
-                      {label: 'Other'},
-                  ]
-              },
-              {label: 'Open'},
-              {separator:true},
-              {label: 'Quit'}
-          ]
+        label: this.translate.instant('user-menu-configurator'),
+        icon: 'pi pi-fw pi-key',
       },
       {
-          label: 'Edit',
-          icon: 'pi pi-fw pi-pencil',
-          items: [
-              {label: 'Delete', icon: 'pi pi-fw pi-trash'},
-              {label: 'Refresh', icon: 'pi pi-fw pi-refresh'}
-          ]
+        label: this.translate.instant('user-menu-superSed'),
+        icon: 'pi pi-fw pi-cog',
       },
       {
-          label: 'Help',
-          icon: 'pi pi-fw pi-question',
-          items: [
-              {
-                  label: 'Contents'
-              },
-              {
-                  label: 'Search', 
-                  icon: 'pi pi-fw pi-search', 
-                  items: [
-                      {
-                          label: 'Text', 
-                          items: [
-                              {
-                                  label: 'Workspace'
-                              }
-                          ]
-                      },
-                      {
-                          label: 'File'
-                      }
-              ]}
-          ]
+        label: this.translate.instant('user-menu-notifications'),
+        icon: 'pi pi-fw pi-bell',
       },
       {
-          label: 'Actions',
-          icon: 'pi pi-fw pi-cog',
-          items: [
+        icon: 'pi pi-fw pi-user',
+        items: [
+          {
+            label: this.translate.instant('user-menu-languages'),
+            items: [
               {
-                  label: 'Edit',
-                  icon: 'pi pi-fw pi-pencil',
-                  items: [
-                      {label: 'Save', icon: 'pi pi-fw pi-save'},
-                      {label: 'Update', icon: 'pi pi-fw pi-save'},
-                  ]
+                label: 'French',
               },
               {
-                  label: 'Other',
-                  icon: 'pi pi-fw pi-tags',
-                  items: [
-                      {label: 'Delete', icon: 'pi pi-fw pi-minus'}
-                  ]
+                label: 'English',
+              },
+              {
+                label: 'Spanish',
               }
-          ]
+            ]
+          },
+          {
+            label: this.translate.instant('user-menu-preferences'),
+          },
+          {
+            label: this.translate.instant('user-menu-subscription'),
+          },
+          {
+            label: this.translate.instant('user-menu-favorites'),
+          },
+          {
+            label: this.translate.instant('user-menu-lastModified'),
+          },
+          {
+            label: this.translate.instant('user-menu-aboutTriskellSoftware'),
+          },
+          {
+            label: this.translate.instant('user-menu-logOut'), icon: 'pi pi-fw pi-times'
+          }
+        ]
       },
-      {separator:true},
-      {
-          label: 'Quit', icon: 'pi pi-fw pi-times'
-      }
-  ];
+
+    ];
   }
 }
 

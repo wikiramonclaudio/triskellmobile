@@ -1,5 +1,16 @@
 {
     "user" : "Usuario",
     "password" : "Contraseña",
-    "action.login": "Entrar"
+    "action.login": "Entrar",
+    "main-menu-project": "Proyecto",
+    "user-menu-preferences": "Preferencias",
+    "user-menu-languages": "Idioma",
+    "user-menu-favorites": "Favoritos",
+    "user-menu-subscription": "Subscripciones",
+    "user-menu-lastModified": "Ultimas modificaciones",
+    "user-menu-aboutTriskellSoftware": "Info sobre la app de Triskell",
+    "user-menu-logOut": "Salir",
+    "user-menu-notifications": "Notificaciones",
+    "user-menu-superSed": "Supersede a user",
+    "user-menu-configurator": "Configurador"
 }
