@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { TopNavbarComponent } from '@src/app/components/top-navbar/top-navbar.component';
+import { ObjectListComponent } from '@src/app/pages/object-list/object-list.component';
 
-describe('TopNavbarComponent', () => {
-  let component: TopNavbarComponent;
-  let fixture: ComponentFixture<TopNavbarComponent>;
+describe('ObjectListComponent', () => {
+  let component: ObjectListComponent;
+  let fixture: ComponentFixture<ObjectListComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ TopNavbarComponent ]
+      declarations: [ ObjectListComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(TopNavbarComponent);
+    fixture = TestBed.createComponent(ObjectListComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

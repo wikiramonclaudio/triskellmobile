@@ -20,56 +20,30 @@ export class MenubarComponent implements OnInit {
     this.translate = this.translationService.getTranslateService();
     this.items = [
       {
-        label: this.translate.instant('user-menu-configurator'),
-        icon: 'pi pi-fw pi-key',
+        label: 'user-menu-preferences',
+        icon: 'directions_bike',
       },
       {
-        label: this.translate.instant('user-menu-superSed'),
-        icon: 'pi pi-fw pi-cog',
+        label: 'user-menu-subscription',
+        icon: 'rss_feed',
       },
       {
-        label: this.translate.instant('user-menu-notifications'),
-        icon: 'pi pi-fw pi-bell',
+        label: 'user-menu-favorites',
+        icon: 'star',
       },
       {
-        icon: 'pi pi-fw pi-user',
-        items: [
-          {
-            label: this.translate.instant('user-menu-languages'),
-            items: [
-              {
-                label: 'French',
-              },
-              {
-                label: 'English',
-              },
-              {
-                label: 'Spanish',
-              }
-            ]
-          },
-          {
-            label: this.translate.instant('user-menu-preferences'),
-          },
-          {
-            label: this.translate.instant('user-menu-subscription'),
-          },
-          {
-            label: this.translate.instant('user-menu-favorites'),
-          },
-          {
-            label: this.translate.instant('user-menu-lastModified'),
-          },
-          {
-            label: this.translate.instant('user-menu-aboutTriskellSoftware'),
-          },
-          {
-            label: this.translate.instant('user-menu-logOut'), icon: 'pi pi-fw pi-times'
-          }
-        ]
+        label: 'user-menu-lastModified',
+        icon: 'track_changes',
       },
-
-    ];
+      {
+        label: 'user-menu-aboutTriskellSoftware',
+        icon: 'info',
+      },
+      {
+        label: 'user-menu-logOut',
+        icon: 'input',
+      }
+    ]
   }
 }
 

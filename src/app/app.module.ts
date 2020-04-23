@@ -12,7 +12,6 @@ import { HomeComponent } from '@src/app/home/home.component';
 
 import { LoginComponent } from '@src/app/components/login/login.component';
 import { MainSidebarComponent } from '@src/app/components/main-sidebar/main-sidebar.component';
-import { TopNavbarComponent } from '@src/app/components/top-navbar/top-navbar.component';
 import { BreadCrumbsComponent } from '@src/app/components/bread-crumbs/bread-crumbs.component';
 import { HttpClientModule, HttpClient} from '@angular/common/http';
 import { TranslateModule, TranslateLoader} from '@ngx-translate/core';
@@ -20,6 +19,7 @@ import { TranslateHttpLoader} from '@ngx-translate/http-loader';
 
 import { ToolbarComponent } from '@src/app/components/toolbar/toolbar.component';
 import { MenubarComponent } from '@src/app/components/menubar/menubar.component';
+import { MaterialModule } from './material.module';
 
 
 export function HttpLoaderFactory(http: HttpClient) {
@@ -32,7 +32,6 @@ export function HttpLoaderFactory(http: HttpClient) {
     HomeComponent,
     LoginComponent,
     MainSidebarComponent,
-    TopNavbarComponent,
     BreadCrumbsComponent,
     ToolbarComponent,
     MenubarComponent
@@ -51,7 +50,8 @@ export function HttpLoaderFactory(http: HttpClient) {
         deps: [ HttpClient ]
       }
     }),
-    PrimeModule
+    PrimeModule,
+    MaterialModule
   ],
   providers: [],
   bootstrap: [AppComponent]

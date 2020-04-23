@@ -1,3 +1,21 @@
-<p-menubar [model]="items">
-    
-</p-menubar>
+
+    <button mat-button>
+        <mat-icon aria-hidden="false">notification_important</mat-icon>
+    </button>
+    <button mat-button>
+        <mat-icon aria-hidden="false">account_circle</mat-icon>
+    </button>
+    <button mat-button>
+        <mat-icon aria-hidden="false">build</mat-icon>
+    </button>
+    <button mat-button [matMenuTriggerFor]="menu">
+        <mat-icon aria-hidden="false">supervised_user_circle</mat-icon>
+    </button>
+        
+
+<mat-menu #menu="matMenu">
+    <button *ngFor="let item of items" mat-menu-item>
+        <mat-icon aria-hidden="false">{{item.icon}}</mat-icon>
+        {{translate.instant(item.label)}}
+    </button>
+</mat-menu>
