@@ -8,7 +8,7 @@ import { TranslationService } from './../../services/translation.service';
   styleUrls: ['./login.component.scss']
 })
 export class LoginComponent implements OnInit {
-
+  chatMessages;
   translate: TranslateService;
   constructor(
     private router: Router,
@@ -22,7 +22,7 @@ export class LoginComponent implements OnInit {
     htmlTag.classList.add('loginPage');
   }
 
-  login(){
+  login() {
     // aqui navegar a la home page
     this.router.navigate(['home']);
   }

@@ -1,3 +1,5 @@
+import { AngularFirestore } from '@angular/fire/firestore';
+import { TkfirebaseService } from './services/tkfirebase.service';
 import { PrimeModule } from './prime.module';
 import { MbscModule } from '@mobiscroll/angular';
 import { NgModule } from '@angular/core';
@@ -21,6 +23,9 @@ import { ToolbarComponent } from '@src/app/components/toolbar/toolbar.component'
 import { MenubarComponent } from '@src/app/components/menubar/menubar.component';
 import { MaterialModule } from './material.module';
 
+// FIrebase
+import { environment } from '@src/environments/environment';
+import { AngularFireModule } from '@angular/fire';
 
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http);
@@ -50,10 +55,11 @@ export function HttpLoaderFactory(http: HttpClient) {
         deps: [ HttpClient ]
       }
     }),
+    AngularFireModule.initializeApp(environment.firebase),
     PrimeModule,
     MaterialModule
   ],
-  providers: [],
+  providers: [AngularFirestore],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

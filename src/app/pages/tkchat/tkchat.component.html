@@ -1,0 +1,20 @@
+<div class="container">
+    <!-- CHat component  -->
+    <div class="row">
+        <div class="col-xs-12">
+            <h1 class="text-center">Chat</h1>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-6">
+            <ul>
+                <li *ngFor="let chatMsg of chatMessages">
+                    <span class="badge badge-info">{{ chatMsg.name }}</span>
+                    <p>{{ chatMsg.message }}</p>
+                </li>
+            </ul>
+            <input type="text" [(ngModel)]="chatMessage.name" placeholder="Name" required>
+            <input type="text" [(ngModel)]="chatMessage.message" placeholder="Message" required (keyup.enter)="saveMessage()">
+        </div>
+    </div>
+</div>

@@ -22,10 +22,14 @@ import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { MaterialModule } from '@src/app/material.module';
 import { ObjectListComponent } from '@src/app/pages/object-list/object-list.component';
 
+import { TkchatComponent } from '@src/app/pages/tkchat/tkchat.component';
+import { AngularFireModule } from '@angular/fire';
+import { AngularFirestore } from '@angular/fire/firestore';
+import { environment } from '@src/environments/environment';
+
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http);
 }
-
 
 @NgModule({
   declarations: [
@@ -36,7 +40,8 @@ export function HttpLoaderFactory(http: HttpClient) {
     BarChartDemoComponent,
     LineComponent,
     PieChartComponent,
-    ObjectListComponent
+    ObjectListComponent,
+    TkchatComponent
   ],
   imports: [
     CommonModule,
@@ -57,6 +62,10 @@ export function HttpLoaderFactory(http: HttpClient) {
         deps: [ HttpClient ]
       }
     }),
+    AngularFireModule.initializeApp(environment.firebase),
+  ],
+  providers: [
+    AngularFirestore
   ]
 })
 export class ContentModule { }
