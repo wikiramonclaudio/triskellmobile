@@ -5,23 +5,24 @@
         <p-megaMenu [model]="items" orientation="vertical"></p-megaMenu>
     </div> -->
 
-    <div class="d-flex flex-column justify-content-center align-items-start pl-0">
-        <a (click)="toggleSidebar()" class="mt-2" [routerLink]="['/home']">Dashboard</a>
-        <a (click)="toggleSidebar()" class="mt-2" [routerLink]="['/home/scheduler']">Calendar</a>
-        <a (click)="toggleSidebar()" class="mt-2" [routerLink]="['/home/preferences']">Preferences</a>
-        <a (click)="toggleSidebar()" class="mt-2" [routerLink]="['/home/listaBartolo']">Lista de bartolos cr</a>
-        <a (click)="toggleSidebar()" class="mt-2" [routerLink]="['/home/chat']">Chat</a>
-        <a (click)="toggleSidebar()" class="mt-2" [routerLink]="['/login']">Salir</a>
-        <!-- <button pButton type="button" (click)="visibleSidebar1 = false" label="Save" class="ui-button-success"></button>
-        <button pButton type="button" (click)="visibleSidebar1 = false" label="Cancel" class="ui-button-secondary"></button> -->
-    </div>
+    <mat-nav-list>
+        <a mat-list-item *ngFor="let link of items" [routerLink]="link.url" routerLinkActive="router-link-active" (click)="toggleSidebar()">
+           
+               
+                <mat-icon color="accent">{{link.icon}}</mat-icon>
+                <span class="text-link">{{translate.instant(link.label)}}</span>
+             
+        </a>
+    </mat-nav-list>
 </p-sidebar>
 
 <!-- TOP SIDE -->
 <mat-toolbar color="primary">
     <mat-toolbar-row>
-        <button pButton type="button" icon="pi pi-bars" (click)="toggleSidebar()"></button>
-        <mat-icon class="logo" svgIcon="logo" aria-hidden="false" aria-label="Example thumbs up SVG icon"></mat-icon>
+        <button mat-icon-button (click)="toggleSidebar()">
+            <mat-icon aria-hidden="false">menu</mat-icon>
+        </button>
+        <mat-icon class="logo" [routerLink]="['/home']" svgIcon="logo" aria-hidden="false" aria-label="Example thumbs up SVG icon"></mat-icon>
         <span class="example-spacer"></span>
         <app-menubar></app-menubar>
     </mat-toolbar-row>

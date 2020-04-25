@@ -1,8 +1,10 @@
 <div class="container-fluid">
     <div class="row">
-        <div class="col-xs-12">
-            <a (click)="vista = 'tarjeta'">tarjeta</a>
-            <a (click)="vista = 'lista'">lsita</a>
+        <div class="cards">
+            <mat-button-toggle-group name="fontStyle" aria-label="Views">
+                <mat-button-toggle value="tarjeta" (click)="vista = 'tarjeta'">Card</mat-button-toggle>
+                <mat-button-toggle value="Lista" (click)="vista = 'lista'">List</mat-button-toggle>
+            </mat-button-toggle-group>
         </div>
     </div>
     <div class="row" *ngIf="vista == 'lista'">
@@ -19,16 +21,14 @@
         </div>
     </div>
     <div class="row" *ngIf="vista == 'tarjeta'">
-        <div *ngFor="let item of items" class="col-xs-12 col-md-6 col-lg-4">
-            <div class="card">
-                vista tarjeta
-                <img class="card-img-top" [src]="item.picture" alt="Card image cap">
-                <div class="card-body">
-                    <h5 class="card-title">{{item.name}}</h5>
-                    <p class="card-text">{{item.about}}</p>
-                    <a href="#" class="btn btn-primary">Go somewhere</a>
-                </div>
-            </div>
-        </div>
+
+        <mat-list class="col-xs-12">
+            <div mat-subheader>Folders</div>
+            <mat-list-item *ngFor="let item of items">
+              <mat-icon mat-list-icon>rate_review</mat-icon>
+              <div mat-line>{{item.name}}</div>
+              <div mat-line> {{item.about}} </div>
+            </mat-list-item>
+          </mat-list>
     </div>
 </div>
