@@ -1,4 +1,3 @@
-<button (click)="changeTheme()" mat-raised-button>cambiar</button>
 <button mat-icon-button [matMenuTriggerFor]="menu2">
     <mat-icon aria-hidden="false">format_color_fill</mat-icon>
 </button>
@@ -33,6 +32,9 @@
     </button>
     <button mat-menu-item (click)="pickColor('warn')">
             <div class="color-swatch color-swatch-warn" mat-menu-item>Warn</div>
+        </button>
+        <button mat-menu-item (click)="pickColor('accent')">
+            <div class="color-swatch color-swatch-accent" mat-menu-item>Accent</div>
         </button>
 </mat-menu>
 

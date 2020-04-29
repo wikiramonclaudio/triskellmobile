@@ -6,7 +6,7 @@ import { OverlayContainer } from '@angular/cdk/overlay';
   providedIn: 'root'
 })
 export class ColorPickerService {
-  initialClass = 'angular-material-router-app-theme';
+  initialClass = 'triskell-theme';
   colorClass$: BehaviorSubject<string> = new BehaviorSubject(this.initialClass);
   constructor(private overlayContainer: OverlayContainer) {
     const storageClass = localStorage.getItem('color-picker');

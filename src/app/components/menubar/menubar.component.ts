@@ -57,7 +57,7 @@ export class MenubarComponent implements OnInit {
       colorTheme = `-${color}`;
     }
     this.colorPicker.setColorClass(
-      `angular-material-router-app-theme${colorTheme}`
+      `triskell-theme${colorTheme}`
     );
   }
 }

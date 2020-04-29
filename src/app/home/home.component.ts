@@ -10,13 +10,9 @@ export class HomeComponent implements OnInit {
   title = 'triskell-angular';
   selectedValues: string[] = [];
   value: Date;
-  darktheme: boolean = false;
   constructor() { }
 
   ngOnInit() {
    
-  }
-  changeTheme(){
-    this.darktheme = !this.darktheme
   }
 }
