@@ -10,6 +10,11 @@ import {MatSidenavModule} from '@angular/material/sidenav';
 import {MatButtonToggleModule} from '@angular/material/button-toggle';
 
 import {MatGridListModule} from '@angular/material/grid-list';
+import {MatInputModule} from '@angular/material/input';
+import {MatFormFieldModule} from '@angular/material/form-field';
+import {MatSelectModule} from '@angular/material/select';
+
+import {MatSlideToggleModule} from '@angular/material/slide-toggle';
 
 @NgModule({
     imports: [
@@ -20,7 +25,11 @@ import {MatGridListModule} from '@angular/material/grid-list';
         MatMenuModule,
         MatSidenavModule,
         MatButtonToggleModule,
-        MatGridListModule
+        MatGridListModule,
+        MatInputModule,
+        MatFormFieldModule,
+        MatSelectModule,
+        MatSlideToggleModule
     ],
     exports: [
         MatButtonModule,
@@ -30,7 +39,11 @@ import {MatGridListModule} from '@angular/material/grid-list';
         MatMenuModule,
         MatSidenavModule,
         MatButtonToggleModule,
-        MatGridListModule
+        MatGridListModule,
+        MatInputModule,
+        MatFormFieldModule,
+        MatSelectModule,
+        MatSlideToggleModule
     ]
 })
 

@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { TranslateService } from '@ngx-translate/core';
 import { TranslationService } from './../../services/translation.service';
+import { ColorPickerService } from './../../services/color-picker.service';
 
 
 @Component({
@@ -12,8 +13,10 @@ export class MenubarComponent implements OnInit {
   // items: MenuItem[];
   items: any[];
   translate: TranslateService;
+  darktheme: boolean = false;
   constructor(
-    public translationService: TranslationService
+    public translationService: TranslationService,
+    private colorPicker: ColorPickerService
   ) { }
 
   ngOnInit() {
@@ -44,6 +47,18 @@ export class MenubarComponent implements OnInit {
         icon: 'input',
       }
     ]
+  }
+  changeTheme(){
+    this.darktheme = !this.darktheme
+  }
+  pickColor(color: string) {
+    let colorTheme = '';
+    if (color !== '') {
+      colorTheme = `-${color}`;
+    }
+    this.colorPicker.setColorClass(
+      `angular-material-router-app-theme${colorTheme}`
+    );
   }
 }
 

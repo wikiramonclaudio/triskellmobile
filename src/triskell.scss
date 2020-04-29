@@ -6,19 +6,27 @@
 // Define the palettes for your theme using the Material Design palettes available in palette.scss
 // (imported above). For each palette, you can optionally specify a default, lighter, and darker
 // hue. Available color palettes: https://material.io/design/color/
-$triskell-primary: mat-palette($mat-yellow);
-$triskell-accent:  mat-palette($mat-pink, A200, A100, A400);
-$mat-toolbar-height-desktop: 200px;
+$triskell-light-primary: mat-palette($mat-gray, 50);
+$triskell-light-accent:  mat-palette($mat-green, 600);
+$triskell-light-warn:    mat-palette($mat-light-blue, 600);
 
-// The warn palette is optional (defaults to red).
-$triskell-warn:    mat-palette($mat-red);
+$triskell-dark-primary: mat-palette($mat-blue-grey, 900);
+$triskell-dark-accent:  mat-palette($mat-green, 100);
+$triskell-dark-warn:    mat-palette($mat-light-blue, 100);
 
 // Create the theme object (a Sass map containing all of the palettes).
-$triskell-theme: mat-light-theme($triskell-primary, $triskell-accent, $triskell-warn);
+$triskell-light-theme: mat-light-theme($triskell-light-primary, $triskell-light-accent, $triskell-light-warn);
+
+$triskell-dark-theme: mat-dark-theme($triskell-dark-primary, $triskell-dark-accent, $triskell-dark-warn);
 
 // Include theme styles for core and each component used in your app.
 // Alternatively, you can import and @include the theme mixins for each component
 // that you are using.
-@include angular-material-theme($triskell-theme);
+@include angular-material-theme($triskell-light-theme);
+
+
+.dark-theme {
+    @include angular-material-theme($triskell-dark-theme);
+}
 
 

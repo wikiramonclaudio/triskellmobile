@@ -3,10 +3,12 @@
 <!-- AQUI VA EL SIDEBAR
 
 Y TAMBIEN EL HEADER TOPBAR -->
-<app-tk-sidebar></app-tk-sidebar>
-<app-bread-crumbs></app-bread-crumbs>
-<router-outlet></router-outlet>
-
+<div [class.dark-theme]="darktheme">
+    <app-tk-sidebar></app-tk-sidebar>
+    <app-bread-crumbs></app-bread-crumbs>
+    <button (click)="changeTheme()" mat-raised-button>cambiar</button>
+    <router-outlet></router-outlet>
+</div>
 <!-- aqui meteria el headerbar -->
 <!-- <tk-header></tk-header>
 <tk-sidebar></tk-sidebar>
