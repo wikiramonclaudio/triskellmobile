@@ -11,7 +11,7 @@ import { filter, map } from 'rxjs/operators';
   styleUrls: ['./bread-crumbs.component.scss']
 })
 export class BreadCrumbsComponent implements OnInit {
-  private items: any[];
+  public items: any[];
   private titleVariable: string;
 
   constructor(
