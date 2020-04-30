@@ -26,7 +26,7 @@ svg {
     }
 
    &:hover #Symbol {
-        animation: rotation 0.5s infinite linear;
+        animation: rotationOut 0.5s infinite  linear;
         transform-origin: 25px;
         cursor: pointer;
         display: inline-block;
@@ -34,7 +34,7 @@ svg {
     
 }
 #Symbol {
-    animation: rotation 1s 2 ease-in-out;
+    animation: rotationIn 0.3s linear;
     transform-origin: 25px;
     cursor: pointer;
 }
@@ -43,14 +43,23 @@ svg {
 }
 
 
-@-webkit-keyframes rotation {
+@-webkit-keyframes rotationIn {
 		from {
 				transform: rotate(0deg);
 		}
 		to {
-				transform: rotate(360deg);
+				transform: rotate(-360deg);
 		}
 }
+@-webkit-keyframes rotationOut {
+    from {
+            transform: rotate(0deg);
+    }
+    to {
+            transform: rotate(-360deg);
+    }
+}
+
 
 
 
