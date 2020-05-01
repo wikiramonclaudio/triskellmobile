@@ -27,6 +27,8 @@ import { MaterialModule } from './material.module';
 import { environment } from '@src/environments/environment';
 import { AngularFireModule } from '@angular/fire';
 
+import { FlexLayoutModule} from '@angular/flex-layout';
+
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http);
 }
@@ -57,7 +59,8 @@ export function HttpLoaderFactory(http: HttpClient) {
     }),
     AngularFireModule.initializeApp(environment.firebase),
     PrimeModule,
-    MaterialModule
+    MaterialModule,
+    FlexLayoutModule
   ],
   providers: [AngularFirestore],
   bootstrap: [AppComponent]
