@@ -27,6 +27,8 @@ import { AngularFireModule } from '@angular/fire';
 import { AngularFirestore } from '@angular/fire/firestore';
 import { environment } from '@src/environments/environment';
 
+import { SharedModule} from './../shared/shared.module';
+
 
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http);
@@ -56,6 +58,7 @@ export function HttpLoaderFactory(http: HttpClient) {
     PrimeModule,
     MaterialModule,
     TranslateModule,
+    SharedModule,
     TranslateModule.forRoot({
       loader: {
         provide: TranslateLoader,
