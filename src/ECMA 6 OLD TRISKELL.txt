@@ -1,0 +1,42 @@
+unction getDoubleCalendarBox
+***********************************
+    if(!label) {
+        return `<table class="${className} double-calerdar x-form-trigger-wrap" cellpadding="0" cellspacing="0"role="presentation" style="width: 100%; table-layout: fixed;">
+                    <tbody role="presentation">
+                        <tr role="presentation">
+                            <td class="x-form-trigger-input-cell" role="presentation" style="width: 100%;">
+                            <input type="text" class="resDateRangeResult x-form-field x-form-required-field x-form-text" name="resdaterange" value=""/ style="width: 100%;"> </td>
+                            <td role="presentation" valign="top" class=" x-trigger-cell x-unselectable" style="width:24px;">
+                                <div class="x-trigger-index-0 x-form-trigger x-form-date-trigger x-form-trigger-first" role="presentation"></div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>`;
+    }else{
+        return `<table class="x-field x-table-plain x-form-item x-form-type-text x-box-item x-field-default x-hbox-form-item" style="width: 100%; table-layout: fixed; right: auto; top: 6px; margin: 0px; left: 0px;" cellpadding="0" role="presentation">
+                    <tbody>
+                        <tr role="presentation" class="x-form-item-input-row">
+                            <td role="presentation" valign="top" halign="right" width="155"
+                                class="x-field-label-cell">
+                                <label for="datefield-2099-inputEl" class="x-form-item-label x-unselectable x-form-item-label-right" style="margin-right:5px;" unselectable="on"><span class="icon-help-noIcon">&nbsp;</span>${label}
+                                </label>
+                            </td>
+                            <td role="presentation" class="x-form-item-body" colspan="2"style="width: 100%;">
+                                <table class="${className} double-calerdar x-form-trigger-wrap" cellpadding="0" cellspacing="0"role="presentation" style="width: 100%; table-layout: fixed;">
+                                    <tbody role="presentation">
+                                        <tr role="presentation">
+                                            <td class="x-form-trigger-input-cell" role="presentation" style="width: 100%;">
+                                                <input type="text" class="resDateRangeResult x-form-field x-form-required-field x-form-text" name="resdaterange" value=""/ style="width: 100%;"> </td>
+                                                <td role="presentation" valign="top" class=" x-trigger-cell x-unselectable" style="width:24px;">
+                                                    <div class="x-trigger-index-0 x-form-trigger x-form-date-trigger x-form-trigger-first" role="presentation"></div>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>`
+    }
+
+
