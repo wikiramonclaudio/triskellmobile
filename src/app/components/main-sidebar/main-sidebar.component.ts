@@ -5,6 +5,7 @@ import { DomSanitizer } from '@angular/platform-browser';
 import { MatIconRegistry } from '@angular/material/icon';
 
 declare var $;
+declare var Mmenu;
 @Component({
   selector: 'app-tk-sidebar',
   templateUrl: './main-sidebar.component.html',
@@ -22,7 +23,7 @@ export class MainSidebarComponent implements OnInit {
   ) {
     iconRegistry.addSvgIcon(
       'logo',
-      sanitizer.bypassSecurityTrustResourceUrl('assets/images/logo.svg'))
+      sanitizer.bypassSecurityTrustResourceUrl('assets/images/logo.svg'));
   }
 
   ngOnInit() {
@@ -43,23 +44,23 @@ export class MainSidebarComponent implements OnInit {
         icon: 'hot_tub',
         url: 'preferences'
       },
-      {
-        label: this.translate.instant('user-menu-calendar'),
-        icon: 'calendar_today',
-        url: 'scheduler'
-      },
-      {
-        label: 'Chat',
-        icon: 'chat',
-        url: 'chat'
-      }
+      // {
+      //   label: this.translate.instant('user-menu-calendar'),
+      //   icon: 'calendar_today',
+      //   url: 'scheduler'
+      // },
+      // {
+      //   label: 'Chat',
+      //   icon: 'chat',
+      //   url: 'chat'
+      // }
     ];
     this.userMenuItems = [
       {
         label: 'Alerts and Notifications',
         icon: 'notifications_none',
         url: 'home'
-      },{
+      }, {
         label: 'My Items',
         icon: 'report_problem',
         childs: 'my-items-childs',
@@ -82,10 +83,41 @@ export class MainSidebarComponent implements OnInit {
         ]
       }
     ];
+
+    this.initSidebarMmenu();
   }
 
   toggleSidebar() {
     this.visibleSidebar1 = !this.visibleSidebar1;
+  }
+
+  initSidebarMmenu() {
+    // document.addEventListener(
+    //   'DOMContentLoaded', () => {
+    //   }
+    //   );
+    new Mmenu('#tkMainMenu', {
+      extensions: [
+        'pagedim-black',
+        "shadow-panels", "fx-panels-slide-100", "border-none",
+        // "fullscreen",
+        //  "position-right"
+      ],
+      counters: true,
+      navbars		: {
+        content : [ "prev", "close" ]
+      }
+      // "navbars": [
+      //   {
+      //     "position": "bottom",
+      //     "content": [
+      //       "<a class='fa fa-envelope' href='#/'></a>",
+      //       "<a class='fa fa-twitter' href='#/'></a>",
+      //       "<a class='fa fa-facebook' href='#/'></a>"
+      //     ]
+      //   }
+      // ]
+    });
   }
 
 }

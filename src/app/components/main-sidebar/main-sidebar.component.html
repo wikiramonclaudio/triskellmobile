@@ -4,7 +4,7 @@
     <!-- <div>
         <p-megaMenu [model]="items" orientation="vertical"></p-megaMenu>
     </div> -->
-
+    
     <mat-nav-list>
         <a mat-list-item>
             <!-- <mat-icon color="accent"></mat-icon> -->
@@ -12,24 +12,20 @@
             <span class="text-link">Eloise Wilson </span>
         </a>
         <mat-divider class="mb-2 mt-2"></mat-divider>
-        <a mat-list-item  [routerLink]="'/home'" routerLinkActive="router-link-active"
-            (click)="toggleSidebar()">
+        <a mat-list-item [routerLink]="'/home'" routerLinkActive="router-link-active" (click)="toggleSidebar()">
             <mat-icon color="accent">notifications_none</mat-icon>
             <span class="text-link">Alerts and notifications</span>
         </a>
-        <a mat-list-item  [routerLink]="" routerLinkActive="router-link-active"
-            (click)="toggleSidebar()">
+        <a mat-list-item [routerLink]="" routerLinkActive="router-link-active" (click)="toggleSidebar()">
             <mat-icon color="accent">how_to_reg</mat-icon>
             <span class="text-link">My items</span>
-        </a>        
+        </a>
         <mat-divider class="mb-2"></mat-divider>
-        <a mat-list-item  [routerLink]="" routerLinkActive="router-link-active"
-            (click)="toggleSidebar()">
+        <a mat-list-item [routerLink]="" routerLinkActive="router-link-active" (click)="toggleSidebar()">
             <mat-icon color="accent">query_builder</mat-icon>
             <span class="text-link">Timesheet</span>
         </a>
-        <a mat-list-item  [routerLink]="" routerLinkActive="router-link-active"
-            (click)="toggleSidebar()">
+        <a mat-list-item [routerLink]="" routerLinkActive="router-link-active" (click)="toggleSidebar()">
             <mat-icon color="accent">calendar_today</mat-icon>
             <span class="text-link">Calendar</span>
         </a>
@@ -49,8 +45,36 @@
             <mat-icon aria-hidden="false">menu</mat-icon>
         </button>
         <mat-icon class="logo" [routerLink]="['/home']" svgIcon="logo" aria-hidden="false"
-            aria-label="Example thumbs up SVG icon"></mat-icon>
+            aria-label=""></mat-icon>
         <span class="example-spacer"></span>
         <app-menubar></app-menubar>
     </mat-toolbar-row>
 </mat-toolbar>
+
+<a href="#tkMainMenu">Mmenu</a>
+<nav id="tkMainMenu">
+    <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/work">Our work</a></li>
+        <li><span>About us</span>
+            <ul>
+                <li><a href="/about/history">History</a></li>
+                <li><span>The team</span>
+                    <ul>
+                        <li><a href="/about/team/management">Management</a></li>
+                        <li><a href="/about/team/sales">Sales</a></li>
+                        <li><a href="/about/team/development">Development</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+        <li><span>Services</span>
+            <ul>
+                <li><a href="/services/design">Design</a></li>
+                <li><a href="/services/development">Development</a></li>
+                <li><a href="/services/marketing">Marketing</a></li>
+            </ul>
+        </li>
+        <li><a href="/contact">Contact</a></li>
+    </ul>
+</nav>

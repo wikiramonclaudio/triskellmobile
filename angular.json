@@ -38,12 +38,15 @@
               "node_modules/primeicons/primeicons.css",
               "node_modules/jqwidgets-ng/jqwidgets/styles/jqx.base.css",
               "node_modules/jqwidgets-ng/jqwidgets/styles/jqx.dark.css",
-              "node_modules/bootstrap/dist/css/bootstrap.css"
+              "node_modules/bootstrap/dist/css/bootstrap.css",
+              "src/assets/mmenu/mmenu.css"
             ],
             "scripts": [
               "./node_modules/jquery/dist/jquery.js",
               "./node_modules/bootstrap/dist/js/bootstrap.js",
-              "./node_modules/chart.js/dist/Chart.js"
+              "./node_modules/chart.js/dist/Chart.js",
+              "src/assets/mmenu/mmenu.js",
+              "src/assets/mmenu/mmenu.polyfills.js"
             ]
           },
           "configurations": {
@@ -106,7 +109,10 @@
               "node_modules/jqwidgets-ng/jqwidgets/styles/jqx.dark.css"      ],
             "scripts": [
               "src/assets/jquery/jquery.min.js",
-              "src/assets/jquery/jquery.ui.js"
+              "src/assets/jquery/jquery.ui.js",
+              "src/assets/mmenu/mmenu.js",
+              "src/assets/mmenu/mmenu.polyfills.js",
+              "src/assets/mmenu/mmenu.css"
             ],
             "assets": [
               "src/favicon.ico",
