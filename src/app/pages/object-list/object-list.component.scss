@@ -1,3 +1,37 @@
 ul li {
     list-style-type: none;
 }
+
+.object-img {
+    width: 40px;
+    height: 40px;
+}
+
+.object-desc {
+    // width: 350px;
+    width: 100%;
+}
+
+
+.object-list-item {
+    cursor: pointer;
+    &:hover {
+        opacity: 0.8;
+    }
+}
+
+.object-labels {
+    margin-left: 10px;
+    width: 87%;
+}
+
+@media screen and (max-width: 400px) {
+    .object-labels {
+        width: 76%;
+    }
+}
+@media screen and (min-width:401px) and (max-width: 550px) {
+    .object-labels {
+        width: 82%;
+    }
+}

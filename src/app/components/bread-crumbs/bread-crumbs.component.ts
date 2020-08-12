@@ -21,7 +21,7 @@ export class BreadCrumbsComponent implements OnInit {
       data => {
         this.titleVariable = data.title;
         this.items = [
-          {label : 'Pimientoolbar'},
+          {label : 'Main'},
           {label : this.titleVariable}
         ];
       }

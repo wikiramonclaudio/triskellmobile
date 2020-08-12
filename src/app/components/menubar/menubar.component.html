@@ -1,47 +1,47 @@
 <button mat-icon-button [matMenuTriggerFor]="menu2">
     <mat-icon aria-hidden="false">format_color_fill</mat-icon>
 </button>
-<button mat-icon-button>
+<!-- <button mat-icon-button>
     <mat-icon aria-hidden="false">notification_important</mat-icon>
 </button>
 
 <button mat-icon-button>
     <mat-icon aria-hidden="false">build</mat-icon>
-</button>
+</button> -->
 <button mat-icon-button [matMenuTriggerFor]="menu">
     <mat-icon aria-hidden="false">supervised_user_circle</mat-icon>
 </button>
 
-<button mat-icon-button>
+<!-- <button mat-icon-button>
     <mat-icon aria-hidden="false">account_circle</mat-icon>
-</button>
+</button> -->
 
 
 <mat-menu #menu2="matMenu">
     <button mat-menu-item (click)="pickColor('green')">
-            <mat-icon class="color-swatch color-swatch-green">fiber_manual_record</mat-icon>
-            <span>Green</span>
+        <mat-icon class="color-swatch color-swatch-green">fiber_manual_record</mat-icon>
+        <span>Green</span>
     </button>
     <button mat-menu-item (click)="pickColor('pink')">
-            <mat-icon class="color-swatch color-swatch-pink">fiber_manual_record</mat-icon>
-            <span>Pink</span>
+        <mat-icon class="color-swatch color-swatch-pink">fiber_manual_record</mat-icon>
+        <span>Pink</span>
     </button>
     <button mat-menu-item (click)="pickColor('purple')">
-            <mat-icon class="color-swatch color-swatch-purple">fiber_manual_record</mat-icon>
-            <span>Purple</span>
-       
+        <mat-icon class="color-swatch color-swatch-purple">fiber_manual_record</mat-icon>
+        <span>Purple</span>
+
     </button>
     <button mat-menu-item (click)="pickColor('yellow')">
-            <mat-icon class="color-swatch color-swatch-yellow">fiber_manual_record</mat-icon>
-            <span>Yellow</span>
+        <mat-icon class="color-swatch color-swatch-yellow">fiber_manual_record</mat-icon>
+        <span>Yellow</span>
     </button>
     <button mat-menu-item (click)="pickColor('warn')">
-            <mat-icon class="color-swatch color-swatch-warn">fiber_manual_record</mat-icon>
-            <span>Warn</span>
+        <mat-icon class="color-swatch color-swatch-warn">fiber_manual_record</mat-icon>
+        <span>Warn</span>
     </button>
     <button mat-menu-item (click)="pickColor('accent')">
-            <mat-icon class="color-swatch color-swatch-accent">fiber_manual_record</mat-icon>
-            <span>Accent</span>
+        <mat-icon class="color-swatch color-swatch-accent">fiber_manual_record</mat-icon>
+        <span>Accent</span>
     </button>
 </mat-menu>
 

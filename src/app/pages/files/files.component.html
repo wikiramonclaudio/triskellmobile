@@ -1,0 +1,18 @@
+<div class="container-fluid">
+    <div class="row">
+        <mat-list role="list" class="w-100">
+            <div *ngFor="let file of files" class="object-list-item">
+                <mat-list-item role="listitem" class="w-100 justify-content-center align-items-center" [routerLink]="'/home/object-detail'">
+                    <img class="object-img" width="40" [src]="'assets/images/no-image.png'">
+                    <div class="d-flex flex-column object-labels">
+                        <span class="font-weight-normal">{{file.name}}</span>
+                        <span class="font-weight-light object-desc d-inline-block text-truncate font-14">Uploaded by {{file.uploadedBy}}</span>
+                        <span class="font-weight-light object-desc d-inline-block text-truncate font-14">({{file.createdDate | date:'shortDate'}})</span>
+                    </div>
+                    <mat-icon>more_vert</mat-icon>
+                </mat-list-item>
+                <mat-divider class="mb-3 mt-3"></mat-divider>
+            </div>
+        </mat-list>
+    </div>
+</div>

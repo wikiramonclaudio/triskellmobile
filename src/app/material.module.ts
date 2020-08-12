@@ -15,6 +15,9 @@ import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatSelectModule} from '@angular/material/select';
 
 import {MatSlideToggleModule} from '@angular/material/slide-toggle';
+import {MatExpansionModule} from '@angular/material/expansion';
+import {MatCardModule} from '@angular/material/card';
+import {MatTabsModule} from '@angular/material/tabs';
 
 @NgModule({
     imports: [
@@ -29,7 +32,10 @@ import {MatSlideToggleModule} from '@angular/material/slide-toggle';
         MatInputModule,
         MatFormFieldModule,
         MatSelectModule,
-        MatSlideToggleModule
+        MatSlideToggleModule,
+        MatExpansionModule,
+        MatCardModule,
+        MatTabsModule
     ],
     exports: [
         MatButtonModule,
@@ -43,7 +49,10 @@ import {MatSlideToggleModule} from '@angular/material/slide-toggle';
         MatInputModule,
         MatFormFieldModule,
         MatSelectModule,
-        MatSlideToggleModule
+        MatSlideToggleModule,
+        MatExpansionModule,
+        MatCardModule,
+        MatTabsModule
     ]
 })
 

@@ -52,10 +52,10 @@
     "zone.js": "~0.10.2"
   },
   "devDependencies": {
+    "@angular-devkit/build-angular": "~0.901.4",
     "@angular/cli": "~9.1.4",
     "@angular/compiler-cli": "~9.1.4",
-    "@angular-devkit/build-angular": "~0.901.4",
-    "@nativescript/schematics": "~1.0.0",
+    "@nativescript/schematics": "^1.0.0-2020-01-28-101344-01",
     "@nativescript/tslint-rules": "~0.0.5",
     "@types/jasmine": "~3.3.8",
     "@types/jasminewd2": "~2.0.3",
@@ -69,10 +69,10 @@
     "karma-jasmine": "~2.0.1",
     "karma-jasmine-html-reporter": "^1.4.0",
     "nativescript-dev-webpack": "~1.4.0",
+    "node-sass": "^4.7.1",
     "protractor": "~5.4.0",
     "ts-node": "~7.0.0",
     "tslint": "~5.15.0",
-    "typescript": "~3.8.3",
-    "node-sass": "^4.7.1"
+    "typescript": "~3.8.3"
   }
 }

@@ -1,4 +1,4 @@
-unction getDoubleCalendarBox
+function getDoubleCalendarBox
 ***********************************
     if(!label) {
         return `<table class="${className} double-calerdar x-form-trigger-wrap" cellpadding="0" cellspacing="0"role="presentation" style="width: 100%; table-layout: fixed;">
@@ -39,4 +39,14 @@ unction getDoubleCalendarBox
                 </table>`
     }
 
-
+*****************************************************************
+function getDefaultDateRangeConf(wrapperClass, options){
+    //ECMA6 
+    // var customRanges = {
+    //     [getI18nText('users_struct_today')]: [moment(), moment()],
+    //     [getI18nText('users_struct_week')]: [moment().startOf('week').add(1,'days'), moment().endOf('week').add(1,'days')],
+    //     [getI18nText('users_struct_month')] : [moment().startOf('month'), moment().endOf('month')],
+    //     [getI18nText('this_quarter')] : [moment().startOf('quarter'), moment().endOf('quarter')],
+    //     [getI18nText('users_struct_year')] : [moment().startOf('year'), moment().endOf('year')],
+    // }
+}

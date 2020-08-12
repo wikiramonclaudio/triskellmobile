@@ -1,3 +1,4 @@
+import { ObjectDetailComponent } from './../../pages/object-detail/object-detail.component';
 import { TkchatComponent } from '@src/app/pages/tkchat/tkchat.component';
 import { DashboardComponent } from './../../pages/dashboard/dashboard.component';
 import { SchedulerComponent } from '@src/app/pages/scheduler/scheduler.component';
@@ -12,6 +13,7 @@ const routes: Routes = [
   { path : 'preferences', component: PreferencesComponent, data: { title: 'Preferences'} },
   { path : 'scheduler', component: SchedulerComponent, data: { title: 'Scheduler'} },
   { path : 'deliverables', component: ObjectListComponent, data: { title: 'Lista'} },
+  { path : 'object-detail', component: ObjectDetailComponent, data: { title: 'Detalle del objeto'} },
   { path : 'chat', component: TkchatComponent, data: { title: 'Chat'} },
   // { path : 'grid', component: PreferencesComponent },
   // { path : 'kanban', component: PreferencesComponent },

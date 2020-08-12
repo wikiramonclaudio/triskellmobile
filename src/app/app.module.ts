@@ -1,6 +1,7 @@
+import { DynamicFormsModule } from './modules/dynamic-forms/dynamic-forms.module';
 import { AngularFirestore } from '@angular/fire/firestore';
-import { TkfirebaseService } from './services/tkfirebase.service';
-import { PrimeModule } from './prime.module';
+import { TkfirebaseService } from '@src/app/services/tkfirebase.service';
+import { PrimeModule } from '@src/app/prime.module';
 import { MbscModule } from '@mobiscroll/angular';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
@@ -21,13 +22,16 @@ import { TranslateHttpLoader} from '@ngx-translate/http-loader';
 
 import { ToolbarComponent } from '@src/app/components/toolbar/toolbar.component';
 import { MenubarComponent } from '@src/app/components/menubar/menubar.component';
-import { MaterialModule } from './material.module';
+import { MaterialModule } from '@src/app/material.module';
 
 // FIrebase
 import { environment } from '@src/environments/environment';
 import { AngularFireModule } from '@angular/fire';
 
-import { SharedModule } from './modules/shared/shared.module';
+import { SharedModule } from '@src/app/modules/shared/shared.module';
+import { ObjectDetailComponent } from '@src/app/pages/object-detail/object-detail.component';
+import { FilesComponent } from '@src/app/pages/files/files.component';
+import { AttributesComponent } from '@src/app/pages/attributes/attributes.component';
 
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http);
@@ -41,7 +45,10 @@ export function HttpLoaderFactory(http: HttpClient) {
     MainSidebarComponent,
     BreadCrumbsComponent,
     ToolbarComponent,
-    MenubarComponent
+    MenubarComponent,
+    ObjectDetailComponent,
+    FilesComponent,
+    AttributesComponent
   ],
   imports: [ 
     MbscModule,
@@ -60,10 +67,12 @@ export function HttpLoaderFactory(http: HttpClient) {
     AngularFireModule.initializeApp(environment.firebase),
     PrimeModule,
     MaterialModule,
-    SharedModule
+    SharedModule,
+    DynamicFormsModule
 
   ],
   providers: [AngularFirestore],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  exports: []
 })
 export class AppModule { }

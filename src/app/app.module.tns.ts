@@ -15,6 +15,16 @@ import { LineComponent } from '@src/app/components/line/line.component';
 import { PieChartComponent } from '@src/app/components/pie-chart/pie-chart.component';
 import { DashboardComponent } from '@src/app/pages/dashboard/dashboard.component';
 import { BreadCrumbsComponent } from '@src/app/components/bread-crumbs/bread-crumbs.component';
+import { MenuListItemComponent } from '@src/app/components/menu-list-item/menu-list-item.component';
+import { ObjectDetailComponent } from '@src/app/components/pages/object-detail/object-detail.component';
+import { FilesComponent } from '@src/app/pages/files/files.component';
+import { AttributesComponent } from '@src/app/pages/attributes/attributes.component';
+import { DropdownComponent } from '@src/app/modules/dynamic-forms/components/dropdown/dropdown.component';
+import { CheckboxComponent } from '@src/app/modules/dynamic-forms/components/checkbox/checkbox.component';
+import { FileComponent } from '@src/app/modules/dynamic-forms/components/file/file.component';
+import { RadioComponent } from '@src/app/modules/dynamic-forms/components/radio/radio.component';
+import { TextboxComponent } from '@src/app/modules/dynamic-forms/components/textbox/textbox.component';
+import { FieldBuilderComponent } from '@src/app/modules/dynamic-forms/components/field-builder/field-builder.component';
 
 
 // Uncomment and add to NgModule imports if you need to use two-way binding
@@ -37,6 +47,16 @@ import { BreadCrumbsComponent } from '@src/app/components/bread-crumbs/bread-cru
     PieChartComponent,
     DashboardComponent,
     BreadCrumbsComponent,
+    MenuListItemComponent,
+    ObjectDetailComponent,
+    FilesComponent,
+    AttributesComponent,
+    DropdownComponent,
+    CheckboxComponent,
+    FileComponent,
+    RadioComponent,
+    TextboxComponent,
+    FieldBuilderComponent,
     // PreferencesComponent,
   ],
   imports: [
@@ -45,6 +65,7 @@ import { BreadCrumbsComponent } from '@src/app/components/bread-crumbs/bread-cru
   ],
   providers: [],
   bootstrap: [AppComponent],
-  schemas: [NO_ERRORS_SCHEMA]
+  schemas: [NO_ERRORS_SCHEMA],
+  exports: [DropdownComponent, CheckboxComponent, FileComponent, RadioComponent, TextboxComponent, FieldBuilderComponent]
 })
 export class AppModule { }
