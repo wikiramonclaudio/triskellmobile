@@ -1,4 +1,4 @@
-import { DynamicFormsModule } from './modules/dynamic-forms/dynamic-forms.module';
+import { DynamicFormsModule } from '@src/app/modules/dynamic-forms/dynamic-forms.module';
 import { AngularFirestore } from '@angular/fire/firestore';
 import { TkfirebaseService } from '@src/app/services/tkfirebase.service';
 import { PrimeModule } from '@src/app/prime.module';
@@ -32,6 +32,7 @@ import { SharedModule } from '@src/app/modules/shared/shared.module';
 import { ObjectDetailComponent } from '@src/app/pages/object-detail/object-detail.component';
 import { FilesComponent } from '@src/app/pages/files/files.component';
 import { AttributesComponent } from '@src/app/pages/attributes/attributes.component';
+import { CommentsComponent } from '@src/app/pages/comments/comments.component';
 
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http);
@@ -48,7 +49,8 @@ export function HttpLoaderFactory(http: HttpClient) {
     MenubarComponent,
     ObjectDetailComponent,
     FilesComponent,
-    AttributesComponent
+    AttributesComponent,
+    CommentsComponent
   ],
   imports: [ 
     MbscModule,

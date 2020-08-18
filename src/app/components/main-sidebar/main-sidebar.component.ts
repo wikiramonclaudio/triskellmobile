@@ -1,3 +1,4 @@
+import { MainTitleService } from './../../services/main-title.service';
 import { Component, OnInit } from '@angular/core';
 import { TranslateService } from '@ngx-translate/core';
 import { TranslationService } from './../../services/translation.service';
@@ -19,7 +20,8 @@ export class MainSidebarComponent implements OnInit {
   constructor(
     public translationService: TranslationService,
     iconRegistry: MatIconRegistry,
-    sanitizer: DomSanitizer
+    sanitizer: DomSanitizer,
+    public mainTitleService: MainTitleService
   ) {
     iconRegistry.addSvgIcon(
       'logo',
@@ -35,7 +37,7 @@ export class MainSidebarComponent implements OnInit {
         url: '/home'
       },
       {
-        label: this.translate.instant('main-menu-deliverable'),
+        label: 'Project',
         icon: 'rate_review',
         url: 'deliverables'
       },

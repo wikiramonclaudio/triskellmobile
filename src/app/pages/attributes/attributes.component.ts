@@ -40,13 +40,13 @@ export class AttributesComponent implements OnInit {
             value: '',
             required: true,
           },
-          {
-            type: 'file',
-            name: 'picture',
-            label: 'Picture',
-            required: true,
-            // onUpload: this.onUpload.bind(this)
-          },
+          // {
+          //   type: 'file',
+          //   name: 'picture',
+          //   label: 'Picture',
+          //   required: true,
+          //   onUpload: this.onUpload.bind(this)
+          // },
           {
             type: 'dropdown',
             name: 'country',
@@ -172,13 +172,13 @@ export class AttributesComponent implements OnInit {
             required: true,
           },
 
-          {
-            type: 'file',
-            name: 'picture',
-            label: 'Picture',
-            required: true,
-            // onUpload: this.onUpload.bind(this)
-          },
+          // {
+          //   type: 'file',
+          //   name: 'picture',
+          //   label: 'Picture',
+          //   required: true,
+          //   onUpload: this.onUpload.bind(this)
+          // },
           {
             type: 'dropdown',
             name: 'country',

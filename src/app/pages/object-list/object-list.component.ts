@@ -1,3 +1,4 @@
+import { MainTitleService } from './../../services/main-title.service';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -8,7 +9,9 @@ import { Component, OnInit } from '@angular/core';
 export class ObjectListComponent implements OnInit {
   public items = [];
   public vista = 'lista';
-  constructor() { }
+  constructor(
+    public mainTitleService: MainTitleService
+  ) { }
 
   ngOnInit() {
     this.items = [
@@ -237,7 +240,9 @@ export class ObjectListComponent implements OnInit {
         "greeting": "Hello, Joni Murray! You have 3 unread messages.",
         "favoriteFruit": "banana"
       }
-    ]
+    ];
+
+    this.mainTitleService.setTitle('Deliverable');
   }
 
 }

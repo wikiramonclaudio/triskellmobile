@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { MainTitleService } from '@src/app/services/main-title.service';
 
 @Component({
   selector: 'app-object-detail',
@@ -8,7 +9,9 @@ import { Component, OnInit } from '@angular/core';
 export class ObjectDetailComponent implements OnInit {
   objectData: any;
   panelOpenState = false;
-  constructor() { }
+  constructor(
+    public mainTitleService: MainTitleService
+  ) { }
 
   ngOnInit(): void {
     this.objectData = {
@@ -48,6 +51,8 @@ export class ObjectDetailComponent implements OnInit {
       'favoriteFruit': 'strawberry',
       'status': 'Deployment'
     };
+
+    this.mainTitleService.setTitle(this.objectData.name);
   }
 
 }

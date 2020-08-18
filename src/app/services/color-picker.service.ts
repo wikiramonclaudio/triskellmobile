@@ -8,6 +8,7 @@ import { OverlayContainer } from '@angular/cdk/overlay';
 export class ColorPickerService {
   initialClass = 'triskell-theme';
   colorClass$: BehaviorSubject<string> = new BehaviorSubject(this.initialClass);
+  title: String = 'Triskell mobile';
   constructor(private overlayContainer: OverlayContainer) {
     const storageClass = localStorage.getItem('color-picker');
     console.log(storageClass);
@@ -18,9 +19,11 @@ export class ColorPickerService {
       overlayContainer.getContainerElement().classList.add(this.initialClass);
     }
   }
+
   getColorClass() {
     return this.colorClass$;
   }
+
   setColorClass(className: string) {
     this.overlayContainer.getContainerElement().classList.forEach(css => {
       this.overlayContainer.getContainerElement().classList.remove(css);
@@ -28,5 +31,9 @@ export class ColorPickerService {
     this.overlayContainer.getContainerElement().classList.add(className);
     this.colorClass$.next(className);
     localStorage.setItem('color-picker', className);
+  }
+
+  setTitleContent(text: string) {
+    this.title = text;
   }
 }

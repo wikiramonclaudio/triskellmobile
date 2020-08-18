@@ -25,6 +25,7 @@ import { FileComponent } from '@src/app/modules/dynamic-forms/components/file/fi
 import { RadioComponent } from '@src/app/modules/dynamic-forms/components/radio/radio.component';
 import { TextboxComponent } from '@src/app/modules/dynamic-forms/components/textbox/textbox.component';
 import { FieldBuilderComponent } from '@src/app/modules/dynamic-forms/components/field-builder/field-builder.component';
+import { CommentsComponent } from '@src/app/pages/comments/comments.component';
 
 
 // Uncomment and add to NgModule imports if you need to use two-way binding
@@ -57,6 +58,7 @@ import { FieldBuilderComponent } from '@src/app/modules/dynamic-forms/components
     RadioComponent,
     TextboxComponent,
     FieldBuilderComponent,
+    CommentsComponent,
     // PreferencesComponent,
   ],
   imports: [

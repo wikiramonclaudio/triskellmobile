@@ -9,12 +9,12 @@
     </div> -->
     <div class="row" *ngIf="vista == 'lista'">
         <mat-list role="list" class="w-100" *ngIf="vista == 'lista'">
-            <div *ngFor="let item of items" class="object-list-item">
-                <mat-list-item role="listitem" class="w-100 justify-content-center align-items-center" [routerLink]="'/home/object-detail'">
+            <div *ngFor="let item of items" class="object-list-item h-auto">
+                <mat-list-item role="listitem" class="w-100 justify-content-center align-items-center h-auto" [routerLink]="'/home/object-detail'">
                     <img class="object-img" width="40" [src]="'assets/images/no-image.png'" alt="">
                     <div class="d-flex flex-column object-labels">
                         <span class="font-weight-normal">{{item.name}}</span>
-                        <span class="font-weight-light object-desc d-inline-block text-truncate">{{item.about}}</span>
+                        <span class="font-weight-light object-desc d-inline-block">{{item.about}}</span>
                     </div>
                     <mat-icon>navigate_next</mat-icon>
                 </mat-list-item>

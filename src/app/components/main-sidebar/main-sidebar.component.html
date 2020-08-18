@@ -44,14 +44,19 @@
         <button mat-icon-button (click)="toggleSidebar()">
             <mat-icon aria-hidden="false">menu</mat-icon>
         </button>
-        <mat-icon class="logo" [routerLink]="['/home']" svgIcon="logo" aria-hidden="false"
-            aria-label=""></mat-icon>
+        <h3 class="tk-main-title w-100 text-center">{{mainTitleService.title}}</h3>
         <span class="example-spacer"></span>
-        <app-menubar></app-menubar>
+        <button mat-icon-button>
+            <mat-icon aria-hidden="false">search</mat-icon>
+        </button>
+        <!-- <mat-icon class="logo" [routerLink]="['/home']" svgIcon="logo" aria-hidden="false"
+            aria-label="">
+        </mat-icon> -->
+        <!-- <app-menubar></app-menubar> -->
     </mat-toolbar-row>
 </mat-toolbar>
 
-<a href="#tkMainMenu">Mmenu</a>
+<!-- <a href="#tkMainMenu">Mmenu</a> -->
 <nav id="tkMainMenu">
     <ul>
         <li><a href="/">Home</a></li>

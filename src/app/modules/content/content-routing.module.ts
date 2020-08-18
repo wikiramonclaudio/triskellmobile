@@ -1,3 +1,6 @@
+import { AttributesComponent } from './../../pages/attributes/attributes.component';
+import { CommentsComponent } from '@src/app/pages/comments/comments.component';
+import { FilesComponent } from './../../pages/files/files.component';
 import { ObjectDetailComponent } from './../../pages/object-detail/object-detail.component';
 import { TkchatComponent } from '@src/app/pages/tkchat/tkchat.component';
 import { DashboardComponent } from './../../pages/dashboard/dashboard.component';
@@ -14,6 +17,9 @@ const routes: Routes = [
   { path : 'scheduler', component: SchedulerComponent, data: { title: 'Scheduler'} },
   { path : 'deliverables', component: ObjectListComponent, data: { title: 'Lista'} },
   { path : 'object-detail', component: ObjectDetailComponent, data: { title: 'Detalle del objeto'} },
+  { path : 'files', component: FilesComponent, data: { title: 'Files'} },
+  { path : 'comments', component: CommentsComponent, data: { title: 'Comments'} },
+  { path : 'attributes', component: AttributesComponent, data: { title: 'Custom attributes'} },
   { path : 'chat', component: TkchatComponent, data: { title: 'Chat'} },
   // { path : 'grid', component: PreferencesComponent },
   // { path : 'kanban', component: PreferencesComponent },

@@ -1,6 +1,6 @@
+
 import { Component, OnInit } from '@angular/core';
-import {CheckboxModule} from 'primeng/checkbox';
-import {CalendarModule} from 'primeng/calendar';
+import { MainTitleService } from '@src/app/services/main-title.service';
 
 declare var $;
 @Component({
@@ -9,13 +9,15 @@ declare var $;
   styleUrls: ['./dashboard.component.scss']
 })
 export class DashboardComponent implements OnInit {
-
-  constructor() { }
+  constructor(
+    private mainTitleService: MainTitleService
+  ) { }
 
   ngOnInit() {
     // var htmlTag = document.querySelector('html');
     // htmlTag.classList.remove('loginPage');
     $('html').removeClass('loginPage');
+    this.mainTitleService.setTitle('Dashboard');
   }
 
 }

@@ -1,3 +1,4 @@
+import { MainTitleService } from './../../services/main-title.service';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -7,10 +8,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FilesComponent implements OnInit {
   files: any [];
-  constructor() { }
+  constructor(
+    private mainTitleService: MainTitleService
+  ) { }
 
   ngOnInit(): void {
     this.getFiles();
+    this.mainTitleService.setTitle(this.mainTitleService.getTitle('i') + ' (Files)');
   }
 
   getFiles() {
