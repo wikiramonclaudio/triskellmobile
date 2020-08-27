@@ -44,7 +44,10 @@
         <button mat-icon-button (click)="toggleSidebar()">
             <mat-icon aria-hidden="false">menu</mat-icon>
         </button>
-        <h3 class="tk-main-title w-100 text-center">{{mainTitleService.title}}</h3>
+        <div class="d-flex flex-column w-100">
+            <h3 class="tk-main-title w-100 text-center">{{mainTitleService.title}}</h3>
+            <span>{{mainTitleService.subtitle}}</span>
+        </div>
         <span class="example-spacer"></span>
         <button mat-icon-button>
             <mat-icon aria-hidden="false">search</mat-icon>

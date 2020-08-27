@@ -1,0 +1,21 @@
+{
+    "user" : "User",
+    "password" : "Password",
+    "action.login": "Login",
+    "main-menu-project": "Project",
+    "main-menu-home": "Home",
+    "main-menu-deliverable": "Deliverable",
+    "main-menu-users": "Users",
+    "main-menu-risk": "Risk",
+    "main-menu-calendar": "Calendar",
+    "user-menu-preferences": "Preferences",
+    "user-menu-languages": "Language",
+    "user-menu-favorites": "Favorites",
+    "user-menu-subscription": "Subscriptions",
+    "user-menu-lastModified": "Last Modified",
+    "user-menu-aboutTriskellSoftware": "About Triskell software",
+    "user-menu-logOut": "Logout",
+    "user-menu-notifications": "Notifications",
+    "user-menu-superSed": "Supersede a User",
+    "user-menu-configurator": "Configurator"
+}

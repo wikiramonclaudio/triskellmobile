@@ -14,7 +14,7 @@ export class FilesComponent implements OnInit {
 
   ngOnInit(): void {
     this.getFiles();
-    this.mainTitleService.setTitle(this.mainTitleService.getTitle('i') + ' (Files)');
+    this.mainTitleService.setSubTitle('Files');
   }
 
   getFiles() {
