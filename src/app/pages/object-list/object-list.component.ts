@@ -243,6 +243,7 @@ export class ObjectListComponent implements OnInit {
     ];
 
     this.mainTitleService.setTitle('Deliverable');
+    this.mainTitleService.setSubTitle('');
   }
 
 }
