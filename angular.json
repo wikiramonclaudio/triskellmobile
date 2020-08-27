@@ -30,7 +30,7 @@
               "src/favicon.ico",
               "src/assets"
             ],
-            "styles": [             
+            "styles": [
               "node_modules/primeng/resources/themes/nova-light/theme.css",
               "node_modules/primeng/resources/primeng.min.css",
               "node_modules/primeicons/primeicons.css",
@@ -38,15 +38,12 @@
               "node_modules/jqwidgets-ng/jqwidgets/styles/jqx.dark.css",
               "node_modules/bootstrap/dist/css/bootstrap.css",
               "src/styles.scss",
-              "src/triskell.scss",
-              // "src/assets/mmenu/mmenu.css"
+              "src/triskell.scss"
             ],
             "scripts": [
               "./node_modules/jquery/dist/jquery.js",
               "./node_modules/bootstrap/dist/js/bootstrap.js",
-              "./node_modules/chart.js/dist/Chart.js",
-              // "src/assets/mmenu/mmenu.js",
-              // "src/assets/mmenu/mmenu.polyfills.js"
+              "./node_modules/chart.js/dist/Chart.js"
             ]
           },
           "configurations": {
@@ -99,21 +96,18 @@
             "polyfills": "src/polyfills.ts",
             "tsConfig": "tsconfig.spec.json",
             "karmaConfig": "karma.conf.js",
-            "styles": [             
+            "styles": [
               "node_modules/primeng/resources/themes/nova-light/theme.css",
               "node_modules/primeng/resources/primeng.min.css",
               "node_modules/primeicons/primeicons.css",
               "node_modules/jqwidgets-ng/jqwidgets/styles/jqx.base.css",
               "node_modules/jqwidgets-ng/jqwidgets/styles/jqx.dark.css",
               "src/styles.scss",
-              "src/triskell.scss",
-              // "src/assets/mmenu/mmenu.css"
+              "src/triskell.scss"
             ],
             "scripts": [
               "src/assets/jquery/jquery.min.js",
-              "src/assets/jquery/jquery.ui.js",
-              // "src/assets/mmenu/mmenu.js",
-              // "src/assets/mmenu/mmenu.polyfills.js"
+              "src/assets/jquery/jquery.ui.js"
             ],
             "assets": [
               "src/favicon.ico",
@@ -132,6 +126,10 @@
               "**/node_modules/**"
             ]
           }
+        },
+        "deploy": {
+          "builder": "angular-cli-ghpages:deploy",
+          "options": {}
         }
       }
     },
