@@ -3,7 +3,7 @@
     "password" : "Contraseña",
     "action.login": "Entrar",
     "main-menu-project": "Proyecto",
-    "main-menu-home": "Incio",
+    "main-menu-home": "Inicio",
     "main-menu-deliverable": "Entregable",
     "main-menu-users": "Usuarios",
     "main-menu-risk": "Riesgos",
@@ -17,5 +17,7 @@
     "user-menu-logOut": "Salir",
     "user-menu-notifications": "Notificaciones",
     "user-menu-superSed": "Supersede a user",
-    "user-menu-configurator": "Configurador"
+    "user-menu-configurator": "Configurador",
+    "main-menu-myItems": "Mis items",
+    "main-menu-timesheet": "Parte de horas"
 }

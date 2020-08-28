@@ -33,9 +33,10 @@ import { ObjectDetailComponent } from '@src/app/pages/object-detail/object-detai
 import { FilesComponent } from '@src/app/pages/files/files.component';
 import { AttributesComponent } from '@src/app/pages/attributes/attributes.component';
 import { CommentsComponent } from '@src/app/pages/comments/comments.component';
+import { MyItemsComponent } from '@src/app/pages/my-items/my-items.component';
 
 export function HttpLoaderFactory(http: HttpClient) {
-  return new TranslateHttpLoader(http);
+  return new TranslateHttpLoader(http, './assets/i18n/', '.json');
 }
 
 @NgModule({
@@ -50,7 +51,8 @@ export function HttpLoaderFactory(http: HttpClient) {
     ObjectDetailComponent,
     FilesComponent,
     AttributesComponent,
-    CommentsComponent
+    CommentsComponent,
+    MyItemsComponent
   ],
   imports: [ 
     MbscModule,

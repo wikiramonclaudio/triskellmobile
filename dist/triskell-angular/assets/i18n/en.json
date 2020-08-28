@@ -17,5 +17,7 @@
     "user-menu-logOut": "Logout",
     "user-menu-notifications": "Notifications",
     "user-menu-superSed": "Supersede a User",
-    "user-menu-configurator": "Configurator"
+    "user-menu-configurator": "Configurator",
+    "main-menu-myItems": "My items",
+    "main-menu-timesheet": "Timesheet"
 }

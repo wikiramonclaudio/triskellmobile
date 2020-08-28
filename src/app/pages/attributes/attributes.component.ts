@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { MainTitleService } from '@src/app/services/main-title.service';
 
 @Component({
   selector: 'app-tk-attributes',
@@ -8,10 +9,13 @@ import { Component, OnInit } from '@angular/core';
 export class AttributesComponent implements OnInit {
 
   attrs: any[];
-  constructor() { }
+  constructor(
+    private mainTitleService: MainTitleService
+  ) { }
 
   ngOnInit(): void {
     this.getAttrs();
+    this.mainTitleService.setSubTitle('Attributes');
   }
 
   getAttrs() {

@@ -39,7 +39,7 @@ export class MainSidebarComponent implements OnInit {
       {
         label: 'Project',
         icon: 'rate_review',
-        url: 'deliverables'
+        url: 'object-list'
       },
       {
         label: this.translate.instant('user-menu-preferences'),
@@ -59,10 +59,6 @@ export class MainSidebarComponent implements OnInit {
     ];
     this.userMenuItems = [
       {
-        label: 'Alerts and Notifications',
-        icon: 'notifications_none',
-        url: 'home'
-      }, {
         label: 'My Items',
         icon: 'report_problem',
         childs: 'my-items-childs',
@@ -86,40 +82,10 @@ export class MainSidebarComponent implements OnInit {
       }
     ];
 
-    this.initSidebarMmenu();
   }
 
   toggleSidebar() {
     this.visibleSidebar1 = !this.visibleSidebar1;
-  }
-
-  initSidebarMmenu() {
-    // document.addEventListener(
-    //   'DOMContentLoaded', () => {
-    //   }
-    //   );
-    new Mmenu('#tkMainMenu', {
-      extensions: [
-        'pagedim-black',
-        "shadow-panels", "fx-panels-slide-100", "border-none",
-        // "fullscreen",
-        //  "position-right"
-      ],
-      counters: true,
-      navbars		: {
-        content : [ "prev", "close" ]
-      }
-      // "navbars": [
-      //   {
-      //     "position": "bottom",
-      //     "content": [
-      //       "<a class='fa fa-envelope' href='#/'></a>",
-      //       "<a class='fa fa-twitter' href='#/'></a>",
-      //       "<a class='fa fa-facebook' href='#/'></a>"
-      //     ]
-      //   }
-      // ]
-    });
   }
 
 }

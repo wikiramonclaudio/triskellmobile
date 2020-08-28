@@ -1,1 +1,39 @@
-<p>preferences works!</p>
+<div class="container animate__animated animate__slideInLeft animate__fast">
+    <form [formGroup]="formGroup" (ngSubmit)="onSubmit(formGroup.value)" class="form d-flex flex-column">
+
+        <mat-form-field floatLabel="never" class="form-element">
+            <input type="text" matInput placeholder="Username" formControlName="username">
+            <mat-error *ngIf="formGroup.controls['username'].invalid">
+                {{getError('user')}}
+            </mat-error>
+        </mat-form-field>
+
+        <mat-form-field floatLabel="never" class="form-element">
+            <input type="password" matInput placeholder="Password" formControlName="password">
+            <mat-error *ngIf="!formGroup.controls['password'].valid">
+                {{getError('pass')}}
+            </mat-error>
+        </mat-form-field>
+
+        <mat-form-field floatLabel="never" class="form-element" >
+            <mat-label>Language</mat-label>
+            <mat-select formControlName="language" >
+                <mat-option value="en">🇬🇧 English</mat-option>
+                <mat-option value="fr">🇫🇷 French</mat-option>
+                <mat-option value="es">🇪🇸 Spanish</mat-option>
+            </mat-select>
+            <mat-error *ngIf="!formGroup.controls['language'].valid">
+                {{getError('lang')}}
+            </mat-error>
+        </mat-form-field>
+
+        <!-- <input type="file" accept="image/*" capture="camera" /> -->
+
+        <div class="form-element mt-3">
+            <button mat-raised-button color="primary" type="submit" class="button" [disabled]="!formGroup.valid">
+                Save
+            </button>
+        </div>
+
+    </form>
+</div>

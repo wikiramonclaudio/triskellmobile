@@ -129,7 +129,11 @@
         },
         "deploy": {
           "builder": "angular-cli-ghpages:deploy",
-          "options": {}
+          "options": {
+            "baseHref": "https://wikiramonclaudio.github.io/triskellmobile/",
+            "name": "wikiramonclaudio",
+            "email": "makarenosh@gmail.com"
+          }
         }
       }
     },

@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { MainTitleService } from '@src/app/services/main-title.service';
+import { Router, NavigationStart, ActivatedRoute } from '@angular/router';
+import { filter } from 'rxjs/operators';
 
 @Component({
   selector: 'app-object-detail',
@@ -9,11 +11,19 @@ import { MainTitleService } from '@src/app/services/main-title.service';
 export class ObjectDetailComponent implements OnInit {
   objectData: any;
   panelOpenState = false;
+  objectName: string;
   constructor(
+    private router: Router,
+    private route: ActivatedRoute,
     public mainTitleService: MainTitleService
-  ) { }
+  ) {
+  }
 
   ngOnInit(): void {
+    this.route.paramMap.subscribe(params => {
+      // this.userType = params.get("name")
+      this.objectName = params.get('name');
+    });
     this.objectData = {
       '_id': '5ea173d014c7742df263d499',
       'index': 0,
@@ -23,7 +33,7 @@ export class ObjectDetailComponent implements OnInit {
       'picture': 'http://placehold.it/32x32',
       'age': 25,
       'eyeColor': 'green',
-      'name': 'PRJ001',
+      'name': this.objectName,
       'gender': 'female',
       'company': 'Project',
       'email': 'lawandamarsh@corecom.com',
@@ -52,7 +62,8 @@ export class ObjectDetailComponent implements OnInit {
       'status': 'Deployment'
     };
 
-    this.mainTitleService.setTitle(this.objectData.name);
+    this.mainTitleService.setTitle(this.objectName);
+    this.mainTitleService.setSubTitle('');
   }
 
 }

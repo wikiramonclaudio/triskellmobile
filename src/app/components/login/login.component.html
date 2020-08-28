@@ -1,5 +1,5 @@
 <div class="flex-centered">
-    <div class="flex-centered__inner mat-elevation-z8">
+    <div class="flex-centered__inner mat-elevation-z8__">
         <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.0" id="Capa_1"
             x="0px" y="0px" viewBox="0 0 156 40" enable-background="new 0 0 156 40" xml:space="preserve">
             <g>
@@ -64,14 +64,14 @@
                 <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
             </button>
         </mat-form-field>
-        <mat-form-field appearance="fill">
+        <!-- <mat-form-field appearance="fill">
             <mat-label>Language</mat-label>
             <select matNativeControl required>
                 <option value="volvo">🇬🇧 English</option>
                 <option value="saab">🇫🇷 French</option>
                 <option value="mercedes">🇪🇸 Spanish</option>
             </select>
-        </mat-form-field>
+        </mat-form-field> -->
         <button  mat-raised-button color="accent" (click)="login()">{{translate.instant('action.login')}}</button>
     </div>
 

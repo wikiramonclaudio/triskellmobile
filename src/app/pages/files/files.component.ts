@@ -21,18 +21,21 @@ export class FilesComponent implements OnInit {
     this.files = [
       {
         name: 'Attachment name 1',
+        picture: 'assets/images/no-image.png',
         type: 'pdf',
         uploadedBy: '** Global Configurator',
         createdDate: new Date()
       },
       {
         name: 'Attachment name 2',
+        picture: 'assets/images/batman.png',
         type: 'xls',
         uploadedBy: '** Global Configurator',
         createdDate: new Date()
       },
       {
         name: 'Attachment name 3',
+        picture: 'assets/images/test.jpg',
         type: 'jpg',
         uploadedBy: '** Global Configurator',
         createdDate: new Date()

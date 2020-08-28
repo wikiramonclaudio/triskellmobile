@@ -3,9 +3,9 @@ import { Router } from '@angular/router';
 import { TranslateService } from '@ngx-translate/core';
 import { TranslationService } from './../../services/translation.service';
 
-import {FormControl, Validators} from '@angular/forms';
+import { FormControl, Validators } from '@angular/forms';
 
-import {LayoutModule} from '@angular/cdk/layout';
+import { LayoutModule } from '@angular/cdk/layout';
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
@@ -20,13 +20,13 @@ export class LoginComponent implements OnInit {
     public translationService: TranslationService
   ) { }
 
-  
+
 
   ngOnInit() {
     this.translate = this.translationService.getTranslateService();
     //add class to login's html tag
-    var htmlTag = document.querySelector('html');
-    htmlTag.classList.add('loginPage');
+    // var htmlTag = document.querySelector('html');
+    // htmlTag.classList.add('loginPage');
   }
 
   login() {
@@ -34,6 +34,7 @@ export class LoginComponent implements OnInit {
     this.router.navigate(['home']);
   }
 }
+
 export class InputErrorsExample {
   emailFormControl = new FormControl('', [
     Validators.required,

@@ -7,27 +7,22 @@
     
     <mat-nav-list>
         <a mat-list-item>
-            <!-- <mat-icon color="accent"></mat-icon> -->
             <img src="./assets/images/user-example.jpg" alt="" class="user-img-menu">
             <span class="text-link">Eloise Wilson </span>
         </a>
         <mat-divider class="mb-2 mt-2"></mat-divider>
-        <a mat-list-item [routerLink]="'/home'" routerLinkActive="router-link-active" (click)="toggleSidebar()">
-            <mat-icon color="accent">notifications_none</mat-icon>
-            <span class="text-link">Alerts and notifications</span>
-        </a>
-        <a mat-list-item [routerLink]="" routerLinkActive="router-link-active" (click)="toggleSidebar()">
+        <a mat-list-item [routerLink]="['my-items']" routerLinkActive="router-link-active" (click)="toggleSidebar()">
             <mat-icon color="accent">how_to_reg</mat-icon>
-            <span class="text-link">My items</span>
+            <span class="text-link">{{translate.instant('main-menu-myItems')}}</span>
         </a>
         <mat-divider class="mb-2"></mat-divider>
         <a mat-list-item [routerLink]="" routerLinkActive="router-link-active" (click)="toggleSidebar()">
             <mat-icon color="accent">query_builder</mat-icon>
-            <span class="text-link">Timesheet</span>
+            <span class="text-link">{{translate.instant('main-menu-timesheet')}}</span>
         </a>
         <a mat-list-item [routerLink]="" routerLinkActive="router-link-active" (click)="toggleSidebar()">
             <mat-icon color="accent">calendar_today</mat-icon>
-            <span class="text-link">Calendar</span>
+            <span class="text-link">{{translate.instant('main-menu-calendar')}}</span>
         </a>
         <mat-divider class="mb-2"></mat-divider>
         <a mat-list-item *ngFor="let link of items" [routerLink]="link.url" routerLinkActive="router-link-active"
@@ -44,9 +39,9 @@
         <button mat-icon-button (click)="toggleSidebar()">
             <mat-icon aria-hidden="false">menu</mat-icon>
         </button>
-        <div class="d-flex flex-column w-100 mt-2">
-            <h3 class="tk-main-title w-100 text-center">{{mainTitleService.title}}</h3>
-            <small class="text-center main-subtitle" [hidden]="mainTitleService.subtitle.length<1">{{mainTitleService.subtitle}}</small>
+        <div class="d-flex flex-column w-100">
+            <h3 class="tk-main-title w-100 text-center animate__animated animate__fadeIn animate__fast">{{mainTitleService.title}}</h3>
+            <small class="text-center main-subtitle animate__animated animate__fadeIn animate__fast" [hidden]="mainTitleService.subtitle.length<1">{{mainTitleService.subtitle}}</small>
         </div>
         <span class="example-spacer"></span>
         <button mat-icon-button>
@@ -58,31 +53,3 @@
         <!-- <app-menubar></app-menubar> -->
     </mat-toolbar-row>
 </mat-toolbar>
-
-<!-- <a href="#tkMainMenu">Mmenu</a> -->
-<nav id="tkMainMenu">
-    <ul>
-        <li><a href="/">Home</a></li>
-        <li><a href="/work">Our work</a></li>
-        <li><span>About us</span>
-            <ul>
-                <li><a href="/about/history">History</a></li>
-                <li><span>The team</span>
-                    <ul>
-                        <li><a href="/about/team/management">Management</a></li>
-                        <li><a href="/about/team/sales">Sales</a></li>
-                        <li><a href="/about/team/development">Development</a></li>
-                    </ul>
-                </li>
-            </ul>
-        </li>
-        <li><span>Services</span>
-            <ul>
-                <li><a href="/services/design">Design</a></li>
-                <li><a href="/services/development">Development</a></li>
-                <li><a href="/services/marketing">Marketing</a></li>
-            </ul>
-        </li>
-        <li><a href="/contact">Contact</a></li>
-    </ul>
-</nav>

@@ -17,7 +17,8 @@ export class DashboardComponent implements OnInit {
     // var htmlTag = document.querySelector('html');
     // htmlTag.classList.remove('loginPage');
     $('html').removeClass('loginPage');
-    this.mainTitleService.setTitle('Dashboard');
+    this.mainTitleService.setTitle('Triskell');
+    this.mainTitleService.setSubTitle('Dashboard');
   }
 
 }

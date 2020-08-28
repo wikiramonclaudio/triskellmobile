@@ -6,7 +6,7 @@ import { Injectable } from '@angular/core';
 export class MainTitleService {
 
   title: String = 'Triskell';
-  subtitle: String = 'Triskell';
+  subtitle: String = '';
   constructor() { }
 
   setTitle(title: string) {
