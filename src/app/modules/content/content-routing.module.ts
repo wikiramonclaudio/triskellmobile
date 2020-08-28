@@ -13,7 +13,7 @@ import { ObjectListComponent } from '@src/app/pages/object-list/object-list.comp
 
 // rutas del modulo content
 const routes: Routes = [
-  { path : '', component: DashboardComponent, data: { title: 'Dashboard'} },
+  { path : '', component: MyItemsComponent, data: { title: 'My items'} },
   { path : 'preferences', component: PreferencesComponent, data: { title: 'Preferences'} },
   { path : 'scheduler', component: SchedulerComponent, data: { title: 'Scheduler'} },
   { path : 'object-list', component: ObjectListComponent, data: { title: 'Lista'} },
@@ -22,7 +22,8 @@ const routes: Routes = [
   { path : 'comments', component: CommentsComponent, data: { title: 'Comments'} },
   { path : 'attributes', component: AttributesComponent, data: { title: 'Custom attributes'} },
   { path : 'my-items', component: MyItemsComponent, data: { title: 'My items'} },
-  { path : 'chat', component: TkchatComponent, data: { title: 'Chat'} },
+  { path : 'dashboard', component: DashboardComponent, data: { title: 'Dashboard'} },
+  // { path : 'chat', component: TkchatComponent, data: { title: 'Chat'} },
   // { path : 'grid', component: PreferencesComponent },
   // { path : 'kanban', component: PreferencesComponent },
   // { path : 'scrum', component: PreferencesComponent }

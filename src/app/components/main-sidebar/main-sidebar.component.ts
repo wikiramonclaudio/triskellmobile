@@ -34,7 +34,7 @@ export class MainSidebarComponent implements OnInit {
       {
         label: this.translate.instant('main-menu-home'),
         icon: 'home',
-        url: '/home'
+        url: 'dashboard'
       },
       {
         label: 'Project',

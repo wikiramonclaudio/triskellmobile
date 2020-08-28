@@ -54,7 +54,7 @@ export function HttpLoaderFactory(http: HttpClient) {
     CommentsComponent,
     MyItemsComponent
   ],
-  imports: [ 
+  imports: [
     MbscModule,
     BrowserModule,
     BrowserAnimationsModule,
