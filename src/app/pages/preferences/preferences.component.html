@@ -15,9 +15,9 @@
             </mat-error>
         </mat-form-field>
 
-        <mat-form-field floatLabel="never" class="form-element" >
+        <mat-form-field floatLabel="never" class="form-element">
             <mat-label>Language</mat-label>
-            <mat-select formControlName="language" >
+            <mat-select formControlName="language">
                 <mat-option value="en">🇬🇧 English</mat-option>
                 <mat-option value="fr">🇫🇷 French</mat-option>
                 <mat-option value="es">🇪🇸 Spanish</mat-option>
@@ -27,13 +27,31 @@
             </mat-error>
         </mat-form-field>
 
+        <div class="avatar-upload">
+            <div class="avatar-edit">
+                <input type='file' (change)="fileChangeEvent($event.target.files)" id="imageUpload"
+                    accept=".png, .jpg, .jpeg" />
+                <label for="imageUpload">
+                    <mat-icon class="ml-1 mt-1" color="primary">create</mat-icon>
+                </label>
+            </div>
+            <div class="avatar-preview">
+                <div id="imagePreview" style="background-image: url(./assets/images/user-example.jpg);">
+                </div>
+            </div>
+        </div>
+
+        <button mat-raised-button color="accent" type="submit" class="button">
+            <span>{{translate.instant('action.reset')}}</span>
+            <!-- <mat-icon>brush</mat-icon> -->
+        </button>
+
         <!-- <input type="file" accept="image/*" capture="camera" /> -->
 
-        <div class="form-element mt-3">
-            <button mat-raised-button color="primary" type="submit" class="button" [disabled]="!formGroup.valid">
-                Save
-            </button>
-        </div>
+        <button mat-raised-button color="primary" type="submit" class="button mt-3" [disabled]="!formGroup.valid">
+            {{translate.instant('action.save')}}
+        </button>
+
 
     </form>
 </div>

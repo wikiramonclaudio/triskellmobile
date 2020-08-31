@@ -1,9 +1,10 @@
 import { MainTitleService } from './../../services/main-title.service';
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, OnDestroy } from '@angular/core';
 import { TranslateService } from '@ngx-translate/core';
 import { TranslationService } from './../../services/translation.service';
 import { DomSanitizer } from '@angular/platform-browser';
 import { MatIconRegistry } from '@angular/material/icon';
+import { Subscription } from 'rxjs';
 
 declare var $;
 declare var Mmenu;
@@ -12,11 +13,12 @@ declare var Mmenu;
   templateUrl: './main-sidebar.component.html',
   styleUrls: ['./main-sidebar.component.scss']
 })
-export class MainSidebarComponent implements OnInit {
+export class MainSidebarComponent implements OnInit, OnDestroy {
   visibleSidebar1 = false;
   items: any[];
   userMenuItems: any[];
   translate: TranslateService;
+  subscription: Subscription;
   constructor(
     public translationService: TranslationService,
     iconRegistry: MatIconRegistry,
@@ -26,6 +28,9 @@ export class MainSidebarComponent implements OnInit {
     iconRegistry.addSvgIcon(
       'logo',
       sanitizer.bypassSecurityTrustResourceUrl('assets/images/logo.svg'));
+      this.subscription = this.translationService.getLanguage().subscribe(data => {
+        this.translate.use(data.lang);
+      });
   }
 
   ngOnInit() {
@@ -86,6 +91,10 @@ export class MainSidebarComponent implements OnInit {
 
   toggleSidebar() {
     this.visibleSidebar1 = !this.visibleSidebar1;
+  }
+
+  ngOnDestroy() {
+    this.subscription.unsubscribe();
   }
 
 }
