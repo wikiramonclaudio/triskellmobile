@@ -16,8 +16,8 @@ export class PreferencesComponent implements OnInit, OnDestroy {
   translate: TranslateService;
   subscription: Subscription;
   constructor(
-    public translationService: TranslationService,
     private formBuilder: FormBuilder,
+    public translationService: TranslationService,
     private mainTitleService: MainTitleService
   ) {
     this.subscription = this.translationService.getLanguage().subscribe(data => {
@@ -33,18 +33,19 @@ export class PreferencesComponent implements OnInit, OnDestroy {
     this.mainTitleService.setSubTitle('');
   }
 
+// create form instance
   createForm() {
     this.formGroup = this.formBuilder.group({
       'username': ['', Validators.required],
       'password': ['', Validators.required],
       'language': ['', Validators.required],
     });
-    console.log(this.translationService.getActiveLang());
     this.formGroup.patchValue({ username: 'Eloise Wilson' });
     this.formGroup.patchValue({ password: 'eloise' });
     this.formGroup.patchValue({ language: this.translationService.getActiveLang() });
   }
 
+  // manage form errors
   getError(el) {
     switch (el) {
       case 'user':
@@ -67,10 +68,12 @@ export class PreferencesComponent implements OnInit, OnDestroy {
     }
   }
 
+  // on send the form
   onSubmit(post) {
     this.translationService.changeLanguage(post.language);
   }
 
+  // update uploaded user img on the screen
   readURL(files) {
     if (files && [0]) {
       const reader = new FileReader();
@@ -83,6 +86,7 @@ export class PreferencesComponent implements OnInit, OnDestroy {
     }
   }
 
+  // on change input file event
   fileChangeEvent(files) {
     this.readURL(files);
   }

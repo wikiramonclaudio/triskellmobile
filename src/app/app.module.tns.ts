@@ -27,6 +27,7 @@ import { TextboxComponent } from '@src/app/modules/dynamic-forms/components/text
 import { FieldBuilderComponent } from '@src/app/modules/dynamic-forms/components/field-builder/field-builder.component';
 import { CommentsComponent } from '@src/app/pages/comments/comments.component';
 import { MyItemsComponent } from '@src/app/pages/my-items/my-items.component';
+import { TopicComponent } from '@src/app/pages/topic/topic.component';
 
 
 // Uncomment and add to NgModule imports if you need to use two-way binding
@@ -61,6 +62,7 @@ import { MyItemsComponent } from '@src/app/pages/my-items/my-items.component';
     FieldBuilderComponent,
     CommentsComponent,
     MyItemsComponent,
+    TopicComponent,
     // PreferencesComponent,
   ],
   imports: [

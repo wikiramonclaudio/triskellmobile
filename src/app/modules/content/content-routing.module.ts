@@ -1,3 +1,4 @@
+import { TopicComponent } from '@src/app/pages/topic/topic.component';
 import { MyItemsComponent } from './../../pages/my-items/my-items.component';
 import { AttributesComponent } from './../../pages/attributes/attributes.component';
 import { CommentsComponent } from '@src/app/pages/comments/comments.component';
@@ -20,6 +21,7 @@ const routes: Routes = [
   { path : 'object-detail/:name', component: ObjectDetailComponent, data: { title: 'Detalle del objeto'} },
   { path : 'files', component: FilesComponent, data: { title: 'Files'} },
   { path : 'comments', component: CommentsComponent, data: { title: 'Comments'} },
+  { path : 'comments/:id', component: TopicComponent, data: { title: 'Topic'} },
   { path : 'attributes', component: AttributesComponent, data: { title: 'Custom attributes'} },
   { path : 'my-items', component: MyItemsComponent, data: { title: 'My items'} },
   { path : 'dashboard', component: DashboardComponent, data: { title: 'Dashboard'} },

@@ -34,7 +34,8 @@ import { FilesComponent } from '@src/app/pages/files/files.component';
 import { AttributesComponent } from '@src/app/pages/attributes/attributes.component';
 import { CommentsComponent } from '@src/app/pages/comments/comments.component';
 import { MyItemsComponent } from '@src/app/pages/my-items/my-items.component';
-import { APP_ROUTES } from './app.routes';
+import { APP_ROUTES } from '@src/app/app.routes';
+import { TopicComponent } from '@src/app/pages/topic/topic.component';
 
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http, './assets/i18n/', '.json');
@@ -53,7 +54,8 @@ export function HttpLoaderFactory(http: HttpClient) {
     FilesComponent,
     AttributesComponent,
     CommentsComponent,
-    MyItemsComponent
+    MyItemsComponent,
+    TopicComponent
   ],
   imports: [
     MbscModule,

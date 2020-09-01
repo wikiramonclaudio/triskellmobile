@@ -3,19 +3,16 @@
         <div class="col-12">
             <mat-list role="list" class="w-100">
                 <div *ngFor="let topic of comments" class="object-list-item">
-                    <mat-list-item role="listitem" class="w-100 justify-content-center align-items-center"
-                        [routerLink]="'/home/object-detail'">
-                        <img class="object-img" width="40" [src]="'assets/images/user-example.jpg'">
-                        <span>{{topic.topic}}</span>
-                        <button mat-icon-button [matMenuTriggerFor]="menu" aria-label="Example icon-button with a menu">
-                            <mat-icon>more_vert</mat-icon>
+                    <mat-list-item role="listitem"
+                        class="w-100 justify-content-center align-items-center comment-list-item"
+                        [routerLink]="['/home/comments', topic.id]">
+                        <img class="object-img rounded-circle" width="40" [src]="'assets/images/user-example.jpg'">
+                        <div class="d-flex flex-column object-labels">
+                            <span>{{topic.topic}}</span>
+                        </div>
+                        <button mat-icon-button aria-label="Click to see object details">
+                            <mat-icon>navigate_next</mat-icon>
                         </button>
-                        <mat-menu #menu="matMenu">
-                            <button mat-menu-item>
-                                <mat-icon>delete</mat-icon>
-                                <span>Delete</span>
-                            </button>
-                        </mat-menu>
                     </mat-list-item>
                     <mat-divider class="mb-3 mt-3"></mat-divider>
                 </div>
