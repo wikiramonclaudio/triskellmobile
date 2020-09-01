@@ -17,12 +17,26 @@ export class CommentsComponent implements OnInit {
   }
 
   getComments() {
-    this.commentsService.getComments().subscribe(
-      (res: any) => {
-        console.log('COMENTALES', res);
-        this.comments = res;
+    this.comments = [
+      {
+        topic: 'A topic'
+      },
+      {
+        topic: 'Another topic'
+      },
+      {
+        topic: 'Another topic 333'
       }
-    )
+    ];
+    // this.commentsService.getComments().subscribe(
+    //   (res: any) => {
+    //     console.log('COMENTALES', res);
+    //     this.comments = res;
+    //   },
+    //   err => {
+    //     console.log('ERROKAKO');
+    //   }
+    // );
   }
 
 }

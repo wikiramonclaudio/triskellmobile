@@ -30,6 +30,7 @@ export class MainSidebarComponent implements OnInit, OnDestroy {
       sanitizer.bypassSecurityTrustResourceUrl('assets/images/logo.svg'));
       this.subscription = this.translationService.getLanguage().subscribe(data => {
         this.translate.use(data.lang);
+        this.ngOnInit();
       });
   }
 

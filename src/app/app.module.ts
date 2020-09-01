@@ -34,6 +34,7 @@ import { FilesComponent } from '@src/app/pages/files/files.component';
 import { AttributesComponent } from '@src/app/pages/attributes/attributes.component';
 import { CommentsComponent } from '@src/app/pages/comments/comments.component';
 import { MyItemsComponent } from '@src/app/pages/my-items/my-items.component';
+import { APP_ROUTES } from './app.routes';
 
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http, './assets/i18n/', '.json');
@@ -58,7 +59,7 @@ export function HttpLoaderFactory(http: HttpClient) {
     MbscModule,
     BrowserModule,
     BrowserAnimationsModule,
-    AppRoutingModule,
+    // AppRoutingModule,
     FormsModule,
     HttpClientModule,
     TranslateModule.forRoot({
@@ -72,8 +73,8 @@ export function HttpLoaderFactory(http: HttpClient) {
     PrimeModule,
     MaterialModule,
     SharedModule,
-    DynamicFormsModule
-
+    DynamicFormsModule,
+    APP_ROUTES
   ],
   providers: [AngularFirestore],
   bootstrap: [AppComponent],
