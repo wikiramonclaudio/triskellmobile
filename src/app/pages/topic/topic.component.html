@@ -1,5 +1,5 @@
-<div class="container pl-0 pr-0 animate__animated animate__slideInLeft animate__fast topic-content" id="topic-content">
-    <div class="row mt-3">
+<div class="container pl-0 pr-0 animate__animated animate__fast topic-content" id="topic-content" [ngClass]="{'animate__slideInRight': navType == 'forward', 'animate__slideInLeft': navType == 'back'}">
+    <div class="row mt-3 pb-3">
         <div class="col-12">
             <mat-list role="list" class="w-100">
                 <div *ngFor="let topic of comments; first as isFirst;" class="object-list-item w-100 mb-3 animate__animated animate__fadeIn animate__fast" [ngClass]="{'mt-3': !isFirst}">
@@ -15,7 +15,7 @@
                         </div>
                     </mat-list-item>
                 </div>
-                <mat-list-item role="list" class="w-100 align-items-center comment-list-item mt-3">
+                <mat-list-item role="list" class="w-100 align-items-center comment-list-item list-form-content mt-3">
                     <form class="send-message-form w-100">
                         <mat-form-field class="w-100 mt-3">
                             <input type="text" matInput placeholder="Write a comment" name="message" [(ngModel)]="message">
@@ -24,7 +24,7 @@
                             </button>
                         </mat-form-field>
                     </form>
-                </mat-list-item>
+                </mat-list-item> 
             </mat-list>
         </div>
     </div>

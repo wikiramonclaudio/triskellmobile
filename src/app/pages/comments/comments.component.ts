@@ -12,11 +12,14 @@ import { TranslateService } from '@ngx-translate/core';
 export class CommentsComponent implements OnInit {
   comments: any [];
   translate: TranslateService;
+  navType: any = '';
   constructor(
     private commentsService: CommentsService,
     private mainTitleService: MainTitleService,
     public translationService: TranslationService,
-  ) { }
+  ) { 
+    this.navType = this.mainTitleService.getNavType();
+  }
 
   ngOnInit(): void {
     this.translate = this.translationService.getTranslateService();

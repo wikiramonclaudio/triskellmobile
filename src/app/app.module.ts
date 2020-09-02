@@ -8,7 +8,6 @@ import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FormsModule } from '@angular/forms';
 
-import { AppRoutingModule } from '@src/app/app-routing.module';
 import { AppComponent } from '@src/app/app.component';
 import { HomeComponent } from '@src/app/home/home.component';
 
@@ -29,13 +28,7 @@ import { environment } from '@src/environments/environment';
 import { AngularFireModule } from '@angular/fire';
 
 import { SharedModule } from '@src/app/modules/shared/shared.module';
-import { ObjectDetailComponent } from '@src/app/pages/object-detail/object-detail.component';
-import { FilesComponent } from '@src/app/pages/files/files.component';
-import { AttributesComponent } from '@src/app/pages/attributes/attributes.component';
-import { CommentsComponent } from '@src/app/pages/comments/comments.component';
-import { MyItemsComponent } from '@src/app/pages/my-items/my-items.component';
 import { APP_ROUTES } from '@src/app/app.routes';
-import { TopicComponent } from '@src/app/pages/topic/topic.component';
 
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http, './assets/i18n/', '.json');
@@ -50,12 +43,6 @@ export function HttpLoaderFactory(http: HttpClient) {
     BreadCrumbsComponent,
     ToolbarComponent,
     MenubarComponent,
-    ObjectDetailComponent,
-    FilesComponent,
-    AttributesComponent,
-    CommentsComponent,
-    MyItemsComponent,
-    TopicComponent
   ],
   imports: [
     MbscModule,

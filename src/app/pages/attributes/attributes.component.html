@@ -1,4 +1,4 @@
-<div class="container animate__animated animate__slideInLeft animate__fast">
+<div class="container animate__animated animate__fast attrs-content main-wrapper" [ngClass]="{'animate__slideInRight': navType == 'forward', 'animate__slideInLeft': navType == 'back'}">
     <mat-tab-group mat-align-tabs="start">
         <mat-tab [label]="item.name" *ngFor="let item of attrs" class="mt-2 p-3">        
             <!-- <div *ngFor="let field of item.fields" class="mt-3">

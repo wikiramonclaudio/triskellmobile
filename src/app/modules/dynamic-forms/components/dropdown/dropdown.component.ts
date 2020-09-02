@@ -3,13 +3,14 @@ import { FormGroup } from '@angular/forms';
 
 @Component({
   selector: 'dropdown',
-  template: `
-      <div [formGroup]="form">
-        <select class="form-control" [id]="field.name" [formControlName]="field.name">
-          <option *ngFor="let opt of field.options" [value]="opt.key">{{opt.label}}</option>
-        </select>
-      </div> 
-    `
+  templateUrl: './dropdown.component.html'
+  // template: `
+  //     <div [formGroup]="form">
+  //       <select class="form-control" [id]="field.name" [formControlName]="field.name">
+  //         <option *ngFor="let opt of field.options" [value]="opt.key">{{opt.label}}</option>
+  //       </select>
+  //     </div> 
+  //   `
 })
 export class DropDownComponent {
   @Input() field: any = {};

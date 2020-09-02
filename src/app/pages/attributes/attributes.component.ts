@@ -7,11 +7,13 @@ import { MainTitleService } from '@src/app/services/main-title.service';
   styleUrls: ['./attributes.component.scss']
 })
 export class AttributesComponent implements OnInit {
-
+  navType: any = '';
   attrs: any[];
   constructor(
     private mainTitleService: MainTitleService
-  ) { }
+  ) {
+    this.navType = this.mainTitleService.getNavType();
+  }
 
   ngOnInit(): void {
     this.getAttrs();
@@ -26,24 +28,24 @@ export class AttributesComponent implements OnInit {
           {
             type: 'text',
             name: 'firstName',
-            label: 'First Name',
+            label: 'Name',
             value: '',
             required: true,
           },
-          {
-            type: 'text',
-            name: 'lastName',
-            label: 'Last Name',
-            value: '',
-            required: true,
-          },
-          {
-            type: 'text',
-            name: 'email',
-            label: 'Email',
-            value: '',
-            required: true,
-          },
+          // {
+          //   type: 'text',
+          //   name: 'lastName',
+          //   label: 'Last Name',
+          //   value: '',
+          //   required: true,
+          // },
+          // {
+          //   type: 'text',
+          //   name: 'email',
+          //   label: 'Email',
+          //   value: '',
+          //   required: true,
+          // },
           // {
           //   type: 'file',
           //   name: 'picture',
@@ -53,34 +55,59 @@ export class AttributesComponent implements OnInit {
           // },
           {
             type: 'dropdown',
-            name: 'country',
-            label: 'Country',
+            name: 'agile',
+            label: 'Agile',
             value: 'in',
             required: true,
             options: [
-              { key: 'in', label: 'India' },
-              { key: 'us', label: 'USA' }
+              { key: 'in', label: 'Yes' },
+              { key: 'us', label: 'no' }
             ]
           },
           {
-            type: 'radio',
-            name: 'country',
-            label: 'Country',
+            type: 'dropdown',
+            name: 'platform',
+            label: 'Platform',
             value: 'in',
             required: true,
             options: [
-              { key: 'm', label: 'Male' },
-              { key: 'f', label: 'Female' }
+              { key: 'in', label: 'Web' },
+              { key: 'us', label: 'Client-Server' },
+              { key: 'el', label: 'Office Tools' }
             ]
           },
+          {
+            type: 'dropdown',
+            name: 'region',
+            label: 'Region',
+            value: 'in',
+            required: true,
+            options: [
+              { key: 'in', label: 'Europe' },
+              { key: 'us', label: 'USA' },
+              { key: 'el', label: 'Japan' },
+              { key: 'ut', label: 'Others' }
+            ]
+          },
+          // {
+          //   type: 'radio',
+          //   name: 'country',
+          //   label: 'Country',
+          //   value: 'in',
+          //   required: true,
+          //   options: [
+          //     { key: 'm', label: 'Male' },
+          //     { key: 'f', label: 'Female' }
+          //   ]
+          // },
           {
             type: 'checkbox',
-            name: 'hobby',
-            label: 'Hobby',
+            name: 'published',
+            label: 'Published?',
             required: true,
             options: [
-              { key: 'f', label: 'Fishing' },
-              { key: 'c', label: 'Cooking' }
+              { key: 'f', label: 'Published' },
+              // { key: 'c', label: 'Cooking' }
             ]
           }
         ]
@@ -88,83 +115,97 @@ export class AttributesComponent implements OnInit {
       {
         name: 'Justification',
         fields: [
-          {
-            type: 'text',
-            name: 'firstName',
-            label: 'First Name',
-            value: '',
-            required: true,
-          },
-          {
-            type: 'text',
-            name: 'lastName',
-            label: 'Last Name',
-            value: '',
-            required: true,
-          },
-          {
-            type: 'text',
-            name: 'email',
-            label: 'Email',
-            value: '',
-            required: true,
-          },
+          // {
+          //   type: 'text',
+          //   name: 'firstName',
+          //   label: 'First Name',
+          //   value: '',
+          //   required: true,
+          // },
+          // {
+          //   type: 'text',
+          //   name: 'lastName',
+          //   label: 'Last Name',
+          //   value: '',
+          //   required: true,
+          // },
+          // {
+          //   type: 'text',
+          //   name: 'email',
+          //   label: 'Email',
+          //   value: '',
+          //   required: true,
+          // },
 
+          // {
+          //   type: 'file',
+          //   name: 'picture',
+          //   label: 'Picture',
+          //   required: true,
+          //   onUpload: this.onUpload.bind(this)
+          // },
           {
-            type: 'file',
-            name: 'picture',
-            label: 'Picture',
+            type: 'dropdown',
+            name: 'activity',
+            label: 'Activity type',
+            value: 'in',
             required: true,
-            // onUpload: this.onUpload.bind(this)
+            options: [
+              { key: 'in', label: 'Corporate projects' },
+              { key: 'us', label: 'Bus improvements' },
+              { key: 'el', label: 'It improvements' },
+              { key: 'ut', label: 'Others' }
+            ]
           },
           {
             type: 'dropdown',
-            name: 'country',
-            label: 'Country',
+            name: 'impact',
+            label: 'Strategic impact',
             value: 'in',
             required: true,
             options: [
-              { key: 'in', label: 'India' },
-              { key: 'us', label: 'USA' }
+              { key: 'in', label: 'High' },
+              { key: 'us', label: 'Medium' },
+              { key: 'lo', label: 'Low' }
             ]
           },
-          {
-            type: 'radio',
-            name: 'country',
-            label: 'Country',
-            value: 'in',
-            required: true,
-            options: [
-              { key: 'm', label: 'Male' },
-              { key: 'f', label: 'Female' }
-            ]
-          },
-          {
-            type: 'checkbox',
-            name: 'hobby',
-            label: 'Hobby',
-            required: true,
-            options: [
-              { key: 'f', label: 'Fishing' },
-              { key: 'c', label: 'Cooking' }
-            ]
-          }
+          // {
+          //   type: 'radio',
+          //   name: 'country',
+          //   label: 'Country',
+          //   value: 'in',
+          //   required: true,
+          //   options: [
+          //     { key: 'm', label: 'Male' },
+          //     { key: 'f', label: 'Female' }
+          //   ]
+          // },
+          // {
+          //   type: 'checkbox',
+          //   name: 'hobby',
+          //   label: 'Hobby',
+          //   required: true,
+          //   options: [
+          //     { key: 'f', label: 'Fishing' },
+          //     { key: 'c', label: 'Cooking' }
+          //   ]
+          // }
         ]
       },
       {
-        name: 'Dates',
+        name: 'Project contact',
         fields: [
           {
             type: 'text',
             name: 'firstName',
-            label: 'First Name',
+            label: 'Name',
             value: '',
             required: true,
           },
           {
             type: 'text',
             name: 'lastName',
-            label: 'Last Name',
+            label: 'Desc',
             value: '',
             required: true,
           },
@@ -183,38 +224,17 @@ export class AttributesComponent implements OnInit {
           //   required: true,
           //   onUpload: this.onUpload.bind(this)
           // },
-          {
-            type: 'dropdown',
-            name: 'country',
-            label: 'Country',
-            value: 'in',
-            required: true,
-            options: [
-              { key: 'in', label: 'India' },
-              { key: 'us', label: 'USA' }
-            ]
-          },
-          {
-            type: 'radio',
-            name: 'country',
-            label: 'Country',
-            value: 'in',
-            required: true,
-            options: [
-              { key: 'm', label: 'Male' },
-              { key: 'f', label: 'Female' }
-            ]
-          },
-          {
-            type: 'checkbox',
-            name: 'hobby',
-            label: 'Hobby',
-            required: true,
-            options: [
-              { key: 'f', label: 'Fishing' },
-              { key: 'c', label: 'Cooking' }
-            ]
-          }
+          // {
+          //   type: 'dropdown',
+          //   name: 'country',
+          //   label: 'Country',
+          //   value: 'in',
+          //   required: true,
+          //   options: [
+          //     { key: 'in', label: 'India' },
+          //     { key: 'us', label: 'USA' }
+          //   ]
+          // },
         ]
       }
     ];

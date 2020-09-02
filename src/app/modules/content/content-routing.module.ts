@@ -4,7 +4,7 @@ import { AttributesComponent } from './../../pages/attributes/attributes.compone
 import { CommentsComponent } from '@src/app/pages/comments/comments.component';
 import { FilesComponent } from './../../pages/files/files.component';
 import { ObjectDetailComponent } from './../../pages/object-detail/object-detail.component';
-import { TkchatComponent } from '@src/app/pages/tkchat/tkchat.component';
+// import { TkchatComponent } from '@src/app/pages/tkchat/tkchat.component';
 import { DashboardComponent } from './../../pages/dashboard/dashboard.component';
 import { SchedulerComponent } from '@src/app/pages/scheduler/scheduler.component';
 import { PreferencesComponent } from '@src/app/pages/preferences/preferences.component';

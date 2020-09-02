@@ -12,6 +12,7 @@ export class ObjectDetailComponent implements OnInit {
   objectData: any;
   panelOpenState = false;
   objectName: string;
+  navType: any = '';
   constructor(
     private router: Router,
     private route: ActivatedRoute,
@@ -20,6 +21,7 @@ export class ObjectDetailComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    this.navType = this.mainTitleService.getNavType();
     this.route.paramMap.subscribe(params => {
       // this.userType = params.get("name")
       this.objectName = params.get('name');

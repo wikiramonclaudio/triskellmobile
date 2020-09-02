@@ -1,5 +1,7 @@
 import { MainTitleService } from './../../services/main-title.service';
 import { Component, OnInit } from '@angular/core';
+import { TranslateService } from '@ngx-translate/core';
+import { TranslationService } from '@src/app/services/translation.service';
 
 @Component({
   selector: 'app-my-items',
@@ -9,13 +11,19 @@ import { Component, OnInit } from '@angular/core';
 export class MyItemsComponent implements OnInit {
   favItems: any [];
   lastItems: any [];
+  translate: TranslateService;
+  navType: any = '';
   constructor(
-    private mainTitleService: MainTitleService
-  ) { }
+    private mainTitleService: MainTitleService,
+    public translationService: TranslationService,
+  ) {
+    this.navType = this.mainTitleService.getNavType();
+   }
 
   ngOnInit(): void {
+    this.translate = this.translationService.getTranslateService();
     this.mainTitleService.setSubTitle('');
-    this.mainTitleService.setTitle('My items');
+    this.mainTitleService.setTitle(this.translate.instant('main-menu-myItems'));
     this.getFavoritesAndLast();
   }
 

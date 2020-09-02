@@ -15,11 +15,13 @@ export class PreferencesComponent implements OnInit, OnDestroy {
   formGroup: FormGroup;
   translate: TranslateService;
   subscription: Subscription;
+  navType: String = '';
   constructor(
     private formBuilder: FormBuilder,
     public translationService: TranslationService,
     private mainTitleService: MainTitleService
   ) {
+    this.navType = this.mainTitleService.getNavType();
     this.subscription = this.translationService.getLanguage().subscribe(data => {
       this.translate.use(data.lang);
       this.mainTitleService.setTitle(this.translate.instant('user-menu-preferences'));

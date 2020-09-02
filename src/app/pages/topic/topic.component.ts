@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { TranslateService } from '@ngx-translate/core';
 import { TranslationService } from '@src/app/services/translation.service';
 import { MainTitleService } from '@src/app/services/main-title.service';
+declare var $;
 @Component({
   selector: 'app-topic',
   templateUrl: './topic.component.html',
@@ -11,10 +12,13 @@ export class TopicComponent implements OnInit {
   translate: TranslateService;
   comments: any[];
   message: string;
+  navType: any = '';
   constructor(
     public translationService: TranslationService,
     private mainTitleService: MainTitleService
-  ) { }
+  ) {
+    this.navType = this.mainTitleService.getNavType();
+  }
 
   ngOnInit(): void {
     this.translate = this.translationService.getTranslateService();
@@ -91,7 +95,7 @@ export class TopicComponent implements OnInit {
 
     setTimeout(() => {
       const chatPanel = document.querySelector('#topic-content');
-      chatPanel.scrollTop = document.body.scrollHeight;
+      $('#topic-content').animate({scrollTop: $(document).height()}, 'slow');
     }, 1000);
   }
 
@@ -100,8 +104,9 @@ export class TopicComponent implements OnInit {
     return new Date(+(new Date()) - Math.floor(Math.random() * 10000000000));
   }
 
+  // on send comment
   sendComment() {
-    if(this.message.length>0) {
+    if (this.message.length > 0) {
       const newComment = {
         topic: 'A topic',
         content: this.message,
@@ -112,7 +117,7 @@ export class TopicComponent implements OnInit {
       this.comments.push(newComment);
       setTimeout(() => {
         const chatPanel = document.querySelector('#topic-content');
-        chatPanel.scrollTop = document.body.scrollHeight;
+        $('#topic-content').animate({scrollTop: $(document).height()}, 'slow');
       }, 1000);
       this.message = '';
     } else{

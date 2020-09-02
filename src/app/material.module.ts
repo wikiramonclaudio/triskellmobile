@@ -18,6 +18,7 @@ import {MatSlideToggleModule} from '@angular/material/slide-toggle';
 import {MatExpansionModule} from '@angular/material/expansion';
 import {MatCardModule} from '@angular/material/card';
 import {MatTabsModule} from '@angular/material/tabs';
+import {MatRadioModule} from '@angular/material/radio';
 
 @NgModule({
     imports: [
@@ -35,7 +36,8 @@ import {MatTabsModule} from '@angular/material/tabs';
         MatSlideToggleModule,
         MatExpansionModule,
         MatCardModule,
-        MatTabsModule
+        MatTabsModule,
+        MatRadioModule
     ],
     exports: [
         MatButtonModule,
@@ -52,7 +54,8 @@ import {MatTabsModule} from '@angular/material/tabs';
         MatSlideToggleModule,
         MatExpansionModule,
         MatCardModule,
-        MatTabsModule
+        MatTabsModule,
+        MatRadioModule
     ]
 })
 

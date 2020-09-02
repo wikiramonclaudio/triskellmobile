@@ -1,6 +1,5 @@
-<div class="container animate__animated animate__slideInLeft animate__fast">
+<div class="container animate__animated animate__fast main-wrapper" [ngClass]="{'animate__slideInRight': navType == 'forward', 'animate__slideInLeft': navType == 'back'}">
     <form [formGroup]="formGroup" (ngSubmit)="onSubmit(formGroup.value)" class="form d-flex flex-column">
-
         <mat-form-field floatLabel="never" class="form-element">
             <input type="text" matInput placeholder="Username" formControlName="username">
             <mat-error *ngIf="formGroup.controls['username'].invalid">

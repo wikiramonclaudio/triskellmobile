@@ -7,6 +7,7 @@ export class MainTitleService {
 
   title: String = 'Triskell';
   subtitle: String = '';
+  navType: any = '';
   constructor() { }
 
   setTitle(title: string) {
@@ -23,5 +24,13 @@ export class MainTitleService {
 
   getSubTitle(title: string) {
     return this.subtitle;
+  }
+
+  getNavType() {
+    return this.navType;
+  }
+
+  setNavType(type: string) {
+    this.navType = type;
   }
 }

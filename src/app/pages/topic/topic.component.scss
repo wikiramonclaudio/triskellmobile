@@ -21,6 +21,12 @@
 }
 
 .topic-content {
-    height: calc(100vh - 56px);
+    height: calc(100vh - 100px);
     overflow-y: auto;
+    overflow-x: hidden;
+    padding-bottom:20px;
+}
+
+.list-form-content {
+    margin-top: 50px!important;
 }

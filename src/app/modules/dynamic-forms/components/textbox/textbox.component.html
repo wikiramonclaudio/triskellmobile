@@ -1,1 +1,6 @@
-<p>textbox works!</p>
+<div [formGroup]="form">
+    <input *ngIf="!field.multiline" [attr.type]="field.type" class="form-control" [id]="field.name" [name]="field.name"
+        [formControlName]="field.name" [required]="field.required"/>
+    <textarea *ngIf="field.multiline" [class.is-invalid]="isDirty && !isValid" [formControlName]="field.name"
+        [id]="field.name" rows="9" class="form-control" [placeholder]="field.placeholder" [required]="field.required"></textarea>
+</div>

@@ -1,0 +1,18 @@
+.attrs-content {
+    height: calc(100vh - 100px);
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+// put scroll to tabs for drag with fingers in mobile
+::ng-deep .mat-tab-header {
+    overflow-x: scroll !important;
+}
+
+::ng-deep .mat-tab-label-container {
+    overflow: visible !important;
+}
+
+::ng-deep .mat-tab-header::-webkit-scrollbar {
+    display: none;
+}

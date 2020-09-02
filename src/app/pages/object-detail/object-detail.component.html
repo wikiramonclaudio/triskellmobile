@@ -1,4 +1,4 @@
-<div class="container animate__animated animate__slideInLeft animate__fast">
+<div class="container animate__animated animate__fast main-wrapper" [ngClass]="{'animate__slideInRight': navType == 'forward', 'animate__slideInLeft': navType == 'back'}">
     <div class="row mt-2">
         <div class="col-12 mt-2">
             <div class="d-flex justify-content-center align-items-center">

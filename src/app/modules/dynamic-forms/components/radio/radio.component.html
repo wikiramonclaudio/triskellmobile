@@ -1,1 +1,13 @@
-<p>radio works!</p>
+<div [formGroup]="form">
+    <div class="form-check" *ngFor="let opt of field.options">
+        <input class="form-check-input" type="radio" [value]="opt.key" [formControlName]="field.name"/>
+        <label class="form-check-label">
+            {{ opt.label }}
+        </label>
+    </div>
+</div>
+<!-- 
+<mat-radio-group aria-label="Select an option">
+    <mat-radio-button value="1">Option 1</mat-radio-button>
+    <mat-radio-button value="2">Option 2</mat-radio-button>
+  </mat-radio-group> -->

@@ -1,9 +1,9 @@
-<div class="container animate__animated animate__slideInLeft animate__fast">
+<div class="container animate__animated animate__fast main-wrapper" [ngClass]="{'animate__slideInRight': mainTitleService.getNavType() == 'forward', 'animate__slideInLeft': mainTitleService.getNavType() == 'back'}">
     <div class="row" *ngIf="vista == 'lista'">
         <mat-list role="list" class="w-100" *ngIf="vista == 'lista'">
             <div *ngFor="let item of items" class="object-list-item h-auto">
-                <mat-list-item role="listitem" class="w-100 justify-content-center align-items-center h-auto animate__animated animate__slideInLeft animate__fast" [routerLink]="['/home/object-detail', item.name]" >
-                    <img class="object-img animate__animated animate__slideInLeft animate__fast" width="40" [src]="'assets/images/no-image.png'" alt="">
+                <mat-list-item role="listitem" class="w-100 justify-content-center align-items-center h-auto animate__animated animate__fast" [ngClass]="{'animate__slideInRight': mainTitleService.getNavType() == 'forward', 'animate__slideInLeft': mainTitleService.getNavType() == 'back'}" [routerLink]="['/home/object-detail', item.name]" >
+                    <img class="object-img animate__animated animate__fast" [ngClass]="{'animate__slideInRight': mainTitleService.getNavType() == 'forward', 'animate__slideInLeft': mainTitleService.getNavType() == 'back'}" width="40" [src]="'assets/images/no-image.png'" alt="">
                     <div class="d-flex flex-column object-labels">
                         <span class="font-weight-normal">{{item.name}}</span>
                         <span class="font-weight-light object-desc d-inline-block">{{item.about}}</span>

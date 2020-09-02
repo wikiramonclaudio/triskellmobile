@@ -8,9 +8,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FilesComponent implements OnInit {
   files: any [];
+  navType: any = '';
   constructor(
     private mainTitleService: MainTitleService
-  ) { }
+  ) { 
+    this.navType = this.mainTitleService.getNavType();
+  }
 
   ngOnInit(): void {
     this.getFiles();

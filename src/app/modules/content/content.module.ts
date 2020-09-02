@@ -5,7 +5,10 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
-import { jqxSchedulerModule } from 'jqwidgets-ng/jqxscheduler';
+// DYNAMIC FORMS (Attributes)
+import { DynamicFormsModule } from './../dynamic-forms/dynamic-forms.module';
+
+// import { jqxSchedulerModule } from 'jqwidgets-ng/jqxscheduler';
 import { HttpClientModule, HttpClientJsonpModule, HttpClient } from '@angular/common/http';
 
 import { ContentRoutingModule } from '@src/app/modules/content/content-routing.module';
@@ -22,13 +25,18 @@ import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { MaterialModule } from '@src/app/material.module';
 import { ObjectListComponent } from '@src/app/pages/object-list/object-list.component';
 
-import { TkchatComponent } from '@src/app/pages/tkchat/tkchat.component';
+// import { TkchatComponent } from '@src/app/pages/tkchat/tkchat.component';
 import { AngularFireModule } from '@angular/fire';
 import { AngularFirestore } from '@angular/fire/firestore';
 import { environment } from '@src/environments/environment';
 
 import { SharedModule} from './../shared/shared.module';
-
+import { ObjectDetailComponent } from '@src/app/pages/object-detail/object-detail.component';
+import { FilesComponent } from '@src/app/pages/files/files.component';
+import { AttributesComponent } from '@src/app/pages/attributes/attributes.component';
+import { CommentsComponent } from '@src/app/pages/comments/comments.component';
+import { MyItemsComponent } from '@src/app/pages/my-items/my-items.component';
+import { TopicComponent } from '@src/app/pages/topic/topic.component';
 
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http, './assets/i18n/', '.json');
@@ -44,7 +52,13 @@ export function HttpLoaderFactory(http: HttpClient) {
     LineComponent,
     PieChartComponent,
     ObjectListComponent,
-    TkchatComponent
+    ObjectDetailComponent,
+    FilesComponent,
+    AttributesComponent,
+    CommentsComponent,
+    MyItemsComponent,
+    TopicComponent
+    // TkchatComponent
   ],
   imports: [
     CommonModule,
@@ -53,7 +67,7 @@ export function HttpLoaderFactory(http: HttpClient) {
     HttpClientModule,
     HttpClientJsonpModule,
     ContentRoutingModule,
-    jqxSchedulerModule,
+    // jqxSchedulerModule,
     MbscModule,
     PrimeModule,
     MaterialModule,
@@ -66,10 +80,11 @@ export function HttpLoaderFactory(http: HttpClient) {
         deps: [ HttpClient ]
       }
     }),
-    AngularFireModule.initializeApp(environment.firebase),
+    DynamicFormsModule
+    // AngularFireModule.initializeApp(environment.firebase),
   ],
   providers: [
-    AngularFirestore
+    // AngularFirestore
   ]
 })
 export class ContentModule { }
