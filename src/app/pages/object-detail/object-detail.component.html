@@ -1,8 +1,9 @@
-<div class="container animate__animated animate__fast main-wrapper" [ngClass]="{'animate__slideInRight': navType == 'forward', 'animate__slideInLeft': navType == 'back'}">
+<div class="container animate__animated animate__fast main-wrapper"
+    [ngClass]="{'animate__slideInRight': navType == 'forward', 'animate__slideInLeft': navType == 'back'}">
     <div class="row mt-2">
         <div class="col-12 mt-2">
-            <div class="d-flex justify-content-center align-items-center">
-                <img class="object-img" width="40" height="40" [src]="'assets/images/no-image.png'" alt="">
+            <div class="d-flex justify-content-center align-items-start">
+                <img class="object-img" width="40" height="40" [src]="objectData.picture" alt="">
                 <div class="d-flex flex-column object-labels">
                     <span class="font-weight-normal">{{objectData.name}}</span>
                     <!-- <span class="font-weight-light object-desc d-inline-block text-truncate">{{objectData.about}}</span> -->
@@ -60,17 +61,83 @@
                     <p>This is the primary content of the panel.</p>
                 </mat-expansion-panel>
             </mat-accordion> -->
-            <mat-nav-list>
-                <mat-divider></mat-divider> 
-                <a mat-list-item [routerLink]="['/home/files']" > Files </a>
-                <mat-divider></mat-divider> 
-                <a mat-list-item [routerLink]="['/home/comments']" > Comments </a>
-                <mat-divider></mat-divider> 
-                <a mat-list-item [routerLink]="['/home/attributes']" > 
+            <mat-list role="list" class="w-100 bg-white pt-3">
+                <div class="object-list-item">
+                    <mat-list-item role="listitem"
+                        class="w-100 justify-content-center align-items-center comment-list-item"
+                        [routerLink]="['/home/files']">                        
+                        <div class="d-flex flex-column object-labels">
+                            <span>Files</span>
+                        </div>
+                        <button mat-icon-button aria-label="Click to see object details">
+                            <mat-icon>navigate_next</mat-icon>
+                        </button>
+                    </mat-list-item>
+                    <mat-divider class="mb-2 mt-2"></mat-divider>
+                </div>
+                <div class="object-list-item">
+                    <mat-list-item role="listitem"
+                        class="w-100 justify-content-center align-items-center comment-list-item"
+                        [routerLink]="['/home/comments']">                        
+                        <div class="d-flex flex-column object-labels">
+                            <span>Comments</span>
+                        </div>
+                        <button mat-icon-button aria-label="Click to see object details">
+                            <mat-icon>navigate_next</mat-icon>
+                        </button>
+                    </mat-list-item>
+                    <mat-divider class="mb-2 mt-2"></mat-divider>
+                </div>
+                <div class="object-list-item">
+                    <mat-list-item role="listitem"
+                        class="w-100 justify-content-center align-items-center comment-list-item"
+                        [routerLink]="['/home/attributes']">                        
+                        <div class="d-flex flex-column object-labels">
+                            <span>Attributes</span>
+                        </div>
+                        <button mat-icon-button aria-label="Click to see object details">
+                            <mat-icon>navigate_next</mat-icon>
+                        </button>
+                    </mat-list-item>
+                    <mat-divider class="mb-2 mt-2"></mat-divider>
+                </div>
+            </mat-list>
+            <!-- <mat-nav-list class="bg-white p-0">
+                <mat-divider></mat-divider>
+                <a mat-list-item [routerLink]="['/home/files']"> Files </a>
+                <mat-divider></mat-divider>
+                <a mat-list-item [routerLink]="['/home/comments']"> Comments </a>
+                <mat-divider></mat-divider>
+                <a mat-list-item [routerLink]="['/home/attributes']">
                     Attributes
                 </a>
                 <mat-divider></mat-divider>
-            </mat-nav-list>
+            </mat-nav-list> -->
+        </div>
+    </div>
+    <div class="row mt-3">
+        <div class="col-12 mt-0">
+            <h6>Subitems and related</h6>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-12 p-0">
+            <mat-list role="list" class="w-100 bg-white pt-3">
+                <div *ngFor="let subitem of subitems" class="object-list-item">
+                    <mat-list-item role="listitem"
+                        class="w-100 justify-content-center align-items-center comment-list-item"
+                        [routerLink]="['/home/subobject-list', subitem.id]">
+                        <img class="object-img" width="40" [src]="subitem.picture">
+                        <div class="d-flex flex-column object-labels">
+                            <span>{{subitem.name}}</span>
+                        </div>
+                        <button mat-icon-button aria-label="Click to see object details">
+                            <mat-icon>navigate_next</mat-icon>
+                        </button>
+                    </mat-list-item>
+                    <mat-divider class="mb-3 mt-3"></mat-divider>
+                </div>
+            </mat-list>
         </div>
     </div>
 </div>

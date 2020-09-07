@@ -35,8 +35,12 @@ export class AppComponent implements OnInit {
           // if back button pressed
           if (event.navigationTrigger == 'popstate' && event.id > 1) {
             this.mainTitleService.setNavType('back');
-          } else{
-            this.mainTitleService.setNavType('forward');
+          } else {
+            if (event.url.indexOf('home/subobject-list') > -1 && event.id > 1) {
+              this.mainTitleService.setNavType('forward-sub');
+            } else {
+              this.mainTitleService.setNavType('forward');
+            }
           }
           // console.group('NavigationStart Event');
           // Every navigation sequence is given a unique ID. Even "popstate"

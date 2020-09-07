@@ -1,56 +1,74 @@
 <div class="container animate__animated animate__fast main-wrapper" [ngClass]="{'animate__fadeIn': navType == 'forward', 'animate__slideInLeft': navType == 'back'}">
-    <form [formGroup]="formGroup" (ngSubmit)="onSubmit(formGroup.value)" class="form d-flex flex-column">
-        <mat-form-field floatLabel="never" class="form-element">
-            <input type="text" matInput placeholder="Username" formControlName="username">
-            <mat-error *ngIf="formGroup.controls['username'].invalid">
-                {{getError('user')}}
-            </mat-error>
-        </mat-form-field>
-
-        <mat-form-field floatLabel="never" class="form-element">
-            <input type="password" matInput placeholder="Password" formControlName="password">
-            <mat-error *ngIf="!formGroup.controls['password'].valid">
-                {{getError('pass')}}
-            </mat-error>
-        </mat-form-field>
-
-        <mat-form-field floatLabel="never" class="form-element">
-            <mat-label>Language</mat-label>
-            <mat-select formControlName="language">
-                <mat-option value="en">🇬🇧 English</mat-option>
-                <mat-option value="fr">🇫🇷 French</mat-option>
-                <mat-option value="es">🇪🇸 Spanish</mat-option>
-            </mat-select>
-            <mat-error *ngIf="!formGroup.controls['language'].valid">
-                {{getError('lang')}}
-            </mat-error>
-        </mat-form-field>
-
-        <div class="avatar-upload">
-            <div class="avatar-edit">
-                <input type='file' (change)="fileChangeEvent($event.target.files)" id="imageUpload"
-                    accept=".png, .jpg, .jpeg" />
-                <label for="imageUpload">
-                    <mat-icon class="ml-1 mt-1" color="primary">create</mat-icon>
-                </label>
-            </div>
-            <div class="avatar-preview">
-                <div id="imagePreview" style="background-image: url(./assets/images/user-example.jpg);">
-                </div>
-            </div>
+    <div class="row mt-3">
+        <div class="col-12">
+            <h6>User info</h6>
         </div>
-
-        <button mat-raised-button color="accent" type="submit" class="button">
-            <span>{{translate.instant('action.reset')}}</span>
-            <!-- <mat-icon>brush</mat-icon> -->
-        </button>
-
-        <!-- <input type="file" accept="image/*" capture="camera" /> -->
-
-        <button mat-raised-button color="primary" type="submit" class="button mt-3" [disabled]="!formGroup.valid">
-            {{translate.instant('action.save')}}
-        </button>
-
-
-    </form>
+    </div>
+    <div class="row">
+        <div class="col-12 bg-white pb-3">
+            <form [formGroup]="formGroup" (ngSubmit)="onSubmit(formGroup.value)" class="form d-flex flex-column w-100">
+                <mat-form-field floatLabel="never" class="form-element">
+                    <input type="text" matInput placeholder="Username" formControlName="username">
+                    <mat-error *ngIf="formGroup.controls['username'].invalid">
+                        {{getError('user')}}
+                    </mat-error>
+                </mat-form-field>
+        
+                <mat-form-field floatLabel="never" class="form-element">
+                    <input type="password" matInput placeholder="Password" formControlName="password">
+                    <mat-error *ngIf="!formGroup.controls['password'].valid">
+                        {{getError('pass')}}
+                    </mat-error>
+                </mat-form-field>
+        
+                <mat-form-field floatLabel="never" class="form-element">
+                    <mat-label>Language</mat-label>
+                    <mat-select formControlName="language">
+                        <mat-option value="en">🇬🇧 English</mat-option>
+                        <mat-option value="fr">🇫🇷 French</mat-option>
+                        <mat-option value="es">🇪🇸 Spanish</mat-option>
+                    </mat-select>
+                    <mat-error *ngIf="!formGroup.controls['language'].valid">
+                        {{getError('lang')}}
+                    </mat-error>
+                </mat-form-field>
+        
+                <div class="avatar-upload">
+                    <div class="avatar-edit">
+                        <input type='file' (change)="fileChangeEvent($event.target.files)" id="imageUpload"
+                            accept=".png, .jpg, .jpeg" />
+                        <label for="imageUpload">
+                            <mat-icon class="ml-1 mt-1" color="primary">create</mat-icon>
+                        </label>
+                    </div>
+                    <div class="avatar-preview">
+                        <div id="imagePreview" style="background-image: url(./assets/images/user-example.jpg);">
+                        </div>
+                    </div>
+                </div>
+        
+                <button mat-raised-button color="accent" type="submit" class="button">
+                    <span>{{translate.instant('action.reset')}}</span>
+                    <!-- <mat-icon>brush</mat-icon> -->
+                </button>
+        
+                <!-- <input type="file" accept="image/*" capture="camera" /> -->
+        
+                <button mat-raised-button color="primary" type="submit" class="button mt-3" [disabled]="!formGroup.valid">
+                    {{translate.instant('action.save')}}
+                </button>
+        
+        
+            </form>
+        </div>
+    </div>
+    <div class="row mt-3">
+        <div class="col-12 bg-white pt-3 pb-3">
+            <button mat-button type="submit" class="button">
+                <mat-icon>exit_to_app</mat-icon>
+                <!-- <i class="fa fa-sign-out-alt"></i> -->
+                <span class="ml-2">{{translate.instant('user-menu-logOut')}}</span>
+            </button>
+        </div>
+    </div>
 </div>

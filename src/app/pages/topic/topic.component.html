@@ -1,6 +1,6 @@
 <div class="container pl-0 pr-0 animate__animated animate__fast topic-content" id="topic-content" [ngClass]="{'animate__slideInRight': navType == 'forward', 'animate__slideInLeft': navType == 'back'}">
     <div class="row mt-3 pb-3">
-        <div class="col-12">
+        <div class="col-12 bg-white">
             <mat-list role="list" class="w-100">
                 <div *ngFor="let topic of comments; first as isFirst;" class="object-list-item w-100 mb-3 animate__animated animate__fadeIn animate__fast" [ngClass]="{'mt-3': !isFirst}">
                     <mat-list-item role="list" class="w-100 align-items-center comment-list-item pl-0 pr-0 w-100"

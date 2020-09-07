@@ -25,7 +25,7 @@ export class MyItemsComponent implements OnInit {
     setTimeout(() => {
       this.mainTitleService.setSubTitle('');
       this.mainTitleService.setTitle(this.translate.instant('main-menu-myItems'));
-    }, 0);
+    }, 50);
     this.getFavoritesAndLast();
   }
 

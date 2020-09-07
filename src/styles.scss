@@ -149,3 +149,19 @@ ul li {
     overflow-x: hidden;
     background-color: #EBECED;
 }
+
+.my-items {
+    .mat-tab-label-container{
+        background-color: #fff;
+        margin-bottom: 12px;
+        .mat-tab-labels {
+            background-color: #fff;
+        }
+    }
+    .mat-tab-body-wrapper {
+        background-color: #fff;
+    }
+    .mat-tab-body {
+        padding-bottom: 0;
+    }
+}

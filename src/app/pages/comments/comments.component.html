@@ -1,7 +1,12 @@
 <div class="container animate__animated animate__fast main-wrapper" [ngClass]="{'animate__slideInRight': navType == 'forward', 'animate__slideInLeft': navType == 'back'}">
     <div class="row mt-3">
         <div class="col-12">
-            <mat-list role="list" class="w-100">
+            <h6>Topics</h6>
+        </div>
+    </div>
+    <div class="row p-0">
+        <div class="col-12 pl-0 pr-0">
+            <mat-list role="list" class="w-100 bg-white pt-3">
                 <div *ngFor="let topic of comments" class="object-list-item">
                     <mat-list-item role="listitem"
                         class="w-100 justify-content-center align-items-center comment-list-item"
@@ -19,4 +24,7 @@
             </mat-list>
         </div>
     </div>
+    <button mat-button mat-fab color="primary" matSuffix (click)="createTopic()" class="create-topic-btn">
+        <mat-icon>add</mat-icon>
+    </button>
 </div>

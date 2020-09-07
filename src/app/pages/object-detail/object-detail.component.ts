@@ -13,6 +13,7 @@ export class ObjectDetailComponent implements OnInit {
   panelOpenState = false;
   objectName: string;
   navType: any = '';
+  subitems: any [] = [];
   constructor(
     private router: Router,
     private route: ActivatedRoute,
@@ -32,7 +33,7 @@ export class ObjectDetailComponent implements OnInit {
       'guid': '5acdc26f-bfa5-4686-b19b-670951092d49',
       'isActive': false,
       'balance': '$1,399.59',
-      'picture': 'http://placehold.it/32x32',
+      'picture': 'assets/images/object/Project.PNG',
       'age': 25,
       'eyeColor': 'green',
       'name': this.objectName,
@@ -66,6 +67,42 @@ export class ObjectDetailComponent implements OnInit {
 
     this.mainTitleService.setTitle(this.objectName);
     this.mainTitleService.setSubTitle('');
+    this.getSubitems();
+  }
+
+  getSubitems() {
+    this.subitems = [
+      {
+        name: 'Workpackage',
+        id: '1234',
+        picture: 'assets/images/object/Workpakage.png'
+      },
+      {
+        name: 'Deliverable',
+        id: '1234',
+        picture: 'assets/images/object/Deliverable.png'
+      },
+      {
+        name: 'Event',
+        id: '1234',
+        picture: 'assets/images/object/Event.png'
+      },
+      {
+        name: 'Risk',
+        id: '1234',
+        picture: 'assets/images/object/Risk.png'
+      },
+      {
+        name: 'Initiatives',
+        id: '1234',
+        picture: 'assets/images/object/Initiatives.png'
+      },
+      {
+        name: 'All custom components',
+        id: '1234',
+        picture: 'assets/images/object/all_custom.png'
+      }
+    ];
   }
 
 }

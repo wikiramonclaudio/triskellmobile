@@ -18,6 +18,7 @@ const routes: Routes = [
   { path : 'preferences', component: PreferencesComponent, data: { title: 'Preferences'} },
   { path : 'scheduler', component: SchedulerComponent, data: { title: 'Scheduler'} },
   { path : 'object-list', component: ObjectListComponent, data: { title: 'Lista'} },
+  { path : 'subobject-list/:id', component: ObjectListComponent, pathMatch: 'full', data: { title: 'Subobjects list'} },
   { path : 'object-detail/:name', component: ObjectDetailComponent, data: { title: 'Detalle del objeto'} },
   { path : 'files', component: FilesComponent, data: { title: 'Files'} },
   { path : 'comments', component: CommentsComponent, data: { title: 'Comments'} },
