@@ -1,6 +1,6 @@
-<div class="container animate__animated animate__fast main-wrapper" [ngClass]="{'animate__slideInRight': navType == 'forward', 'animate__slideInLeft': navType == 'back'}">
+<div class="container animate__animated animate__fast main-wrapper" [ngClass]="{'animate__fadeIn': navType == 'forward', 'animate__slideInLeft': navType == 'back'}">
     <mat-tab-group mat-align-tabs="center">
-        <mat-tab label="Favorites">
+        <mat-tab label="{{translate.instant('user-menu-favorites')}}">
             <div class="animate__animated animate__fadeIn animate__fast">
                 <mat-list role="list" class="w-100">
                     <div *ngFor="let item of favItems" class="object-list-item h-auto">
@@ -21,7 +21,7 @@
                 </mat-list>
             </div>
         </mat-tab>
-        <mat-tab label="Last modified">
+        <mat-tab label="{{translate.instant('user-menu-lastModified')}}">
             <div class="animate__animated animate__fadeIn animate__fast">
                 <mat-list role="list" class="w-100">
                     <div *ngFor="let item of lastItems" class="object-list-item h-auto">

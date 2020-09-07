@@ -6,7 +6,7 @@
                     <mat-list-item role="listitem"
                         class="w-100 justify-content-center align-items-center comment-list-item"
                         [routerLink]="['/home/comments', topic.id]">
-                        <img class="object-img rounded-circle" width="40" [src]="'assets/images/user-example.jpg'">
+                        <img class="object-img rounded-circle" width="40" [src]="topic.ownerPicture">
                         <div class="d-flex flex-column object-labels">
                             <span>{{topic.topic}}</span>
                         </div>

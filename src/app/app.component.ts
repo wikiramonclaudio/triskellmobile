@@ -31,40 +31,32 @@ export class AppComponent implements OnInit {
       )
       .subscribe(
         (event: NavigationStart) => {
-          console.log('full event', event);
-          console.group('NavigationStart Event');
+          console.log('event', event);
+          // if back button pressed
+          if (event.navigationTrigger == 'popstate' && event.id > 1) {
+            this.mainTitleService.setNavType('back');
+          } else{
+            this.mainTitleService.setNavType('forward');
+          }
+          // console.group('NavigationStart Event');
           // Every navigation sequence is given a unique ID. Even "popstate"
           // navigations are really just "roll forward" navigations that get
           // a new, unique ID.
-          console.log('navigation id:', event.id);
-          console.log('route:', event.url);
           // The "navigationTrigger" will be one of:
           // --
           // - imperative (ie, user clicked a link).
           // - popstate (ie, browser controlled change such as Back button).
           // - hashchange
-          // --
-          // NOTE: I am not sure what triggers the "hashchange" type.
-          console.log('trigger:', event.navigationTrigger);
-
-          // if back button pressed
-          if (event.navigationTrigger == 'popstate' && event.id > 1) {
-            console.log($('.main-wrapper'));
-            this.mainTitleService.setNavType('back');
-          } else{
-            this.mainTitleService.setNavType('forward');
-          }
-
           // This "restoredState" property is defined when the navigation
           // event is triggered by a "popstate" event (ex, back / forward
           // buttons). It will contain the ID of the earlier navigation event
-          if (event.restoredState) {
-            console.warn(
-              'restoring navigation id:',
-              event.restoredState.navigationId
-            );
-          }
-          console.groupEnd();
+          // if (event.restoredState) {
+          //   console.warn(
+          //     'restoring navigation id:',
+          //     event.restoredState.navigationId
+          //   );
+          // }
+          // console.groupEnd();
         }
       )
       ;

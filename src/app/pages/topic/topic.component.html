@@ -5,7 +5,7 @@
                 <div *ngFor="let topic of comments; first as isFirst;" class="object-list-item w-100 mb-3 animate__animated animate__fadeIn animate__fast" [ngClass]="{'mt-3': !isFirst}">
                     <mat-list-item role="list" class="w-100 align-items-center comment-list-item pl-0 pr-0 w-100"
                         [routerLink]="['/home/comments', topic.id]">
-                        <img class="object-img rounded-circle" width="40" [src]="'assets/images/user-example.jpg'">
+                        <img class="object-img rounded-circle" width="40" [src]="topic.ownerPicture">
                         <div class="d-flex flex-column object-labels">
                             <div class="d-flex align-items-end">
                                 <span class="comment-owner">{{topic.owner}}</span>

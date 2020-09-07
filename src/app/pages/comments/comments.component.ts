@@ -24,21 +24,26 @@ export class CommentsComponent implements OnInit {
   ngOnInit(): void {
     this.translate = this.translationService.getTranslateService();
     this.getComments();
-    this.mainTitleService.setSubTitle(this.translate.instant('main-menu-comments'));
+    setTimeout(() => {
+      this.mainTitleService.setSubTitle(this.translate.instant('main-menu-comments'));
+    }, 0);
   }
 
   getComments() {
     this.comments = [
       {
         topic: 'A topic',
+        ownerPicture: 'assets/images/user-example.jpg',
         id: 123454345435
       },
       {
         topic: 'Another topic',
+        ownerPicture: 'assets/images/user-example2.jpg',
         id: 1200445435
       },
       {
         topic: 'Another topic 333',
+        ownerPicture: 'assets/images/user-example.jpg',
         id: 99832843247
       }
     ];

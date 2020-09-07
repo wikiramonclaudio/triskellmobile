@@ -9,9 +9,12 @@ import { Component, OnInit } from '@angular/core';
 export class ObjectListComponent implements OnInit {
   public items = [];
   public vista = 'lista';
+  navType: any = '';
   constructor(
     public mainTitleService: MainTitleService
-  ) { }
+  ) {
+    this.navType = this.mainTitleService.getNavType();
+  }
 
   ngOnInit() {
     this.items = [

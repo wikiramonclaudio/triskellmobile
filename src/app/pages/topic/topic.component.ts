@@ -23,6 +23,10 @@ export class TopicComponent implements OnInit {
   ngOnInit(): void {
     this.translate = this.translationService.getTranslateService();
     this.getComments();
+    setTimeout(() => {
+      this.mainTitleService.setTitle(this.translate.instant('main-menu-comments'));
+      this.mainTitleService.setSubTitle('A topic');
+    }, 200);
   }
 
   // get comments of selected topic
@@ -31,63 +35,63 @@ export class TopicComponent implements OnInit {
       {
         topic: 'A topic',
         content: 'The PRJ will be postponed',
-        ownerImg: 'assets/images/user-example.jpg',
+        ownerPicture: 'assets/images/user-example.jpg',
         owner: 'Eloise Wilson',
         date: this.randomDate()
       },
       {
         topic: 'A topic',
         content: 'Thanks, How do you think this delay will affect the next release?',
-        ownerImg: 'assets/images/user-example.jpg',
+        ownerPicture: 'assets/images/user-example2.jpg',
         owner: 'Tomas Osterhagen',
         date: this.randomDate()
       },
       {
         topic: 'A topic',
         content: 'I think there is no problem about this delay.',
-        ownerImg: 'assets/images/user-example.jpg',
+        ownerPicture: 'assets/images/user-example.jpg',
         owner: 'Eloise Wilson',
         date: this.randomDate()
       },
       {
         topic: 'A topic',
         content: 'The PRJ will be postponed',
-        ownerImg: 'assets/images/user-example.jpg',
+        ownerPicture: 'assets/images/user-example2.jpg',
         owner: 'Eloise Wilson',
         date: this.randomDate()
       },
       {
         topic: 'A topic',
         content: 'Thanks, How do you think this delay will affect the next release?',
-        ownerImg: 'assets/images/user-example.jpg',
+        ownerPicture: 'assets/images/user-example.jpg',
         owner: 'Tomas Osterhagen',
         date: this.randomDate()
       },
       {
         topic: 'A topic',
         content: 'I think there is no problem about this delay.',
-        ownerImg: 'assets/images/user-example.jpg',
+        ownerPicture: 'assets/images/user-example.jpg',
         owner: 'Eloise Wilson',
         date: this.randomDate()
       },
       {
         topic: 'A topic',
         content: 'The PRJ will be postponed',
-        ownerImg: 'assets/images/user-example.jpg',
+        ownerPicture: 'assets/images/user-example2.jpg',
         owner: 'Eloise Wilson',
         date: this.randomDate()
       },
       {
         topic: 'A topic',
         content: 'Thanks, How do you think this delay will affect the next release?',
-        ownerImg: 'assets/images/user-example.jpg',
+        ownerPicture: 'assets/images/user-example.jpg',
         owner: 'Tomas Osterhagen',
         date: this.randomDate()
       },
       {
         topic: 'A topic',
         content: 'I think there is no problem about this delay.',
-        ownerImg: 'assets/images/user-example.jpg',
+        ownerPicture: 'assets/images/user-example2.jpg',
         owner: 'Eloise Wilson',
         date: this.randomDate()
       }
@@ -110,7 +114,7 @@ export class TopicComponent implements OnInit {
       const newComment = {
         topic: 'A topic',
         content: this.message,
-        ownerImg: 'assets/images/user-example.jpg',
+        ownerPicture: 'assets/images/user-example.jpg',
         owner: 'Eloise Wilson',
         date: new Date()
       };

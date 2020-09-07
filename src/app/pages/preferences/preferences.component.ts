@@ -15,7 +15,7 @@ export class PreferencesComponent implements OnInit, OnDestroy {
   formGroup: FormGroup;
   translate: TranslateService;
   subscription: Subscription;
-  navType: String = '';
+  navType: any = '';
   constructor(
     private formBuilder: FormBuilder,
     public translationService: TranslationService,
@@ -31,8 +31,10 @@ export class PreferencesComponent implements OnInit, OnDestroy {
   ngOnInit() {
     this.createForm();
     this.translate = this.translationService.getTranslateService();
-    this.mainTitleService.setTitle(this.translate.instant('user-menu-preferences'));
-    this.mainTitleService.setSubTitle('');
+    setTimeout(() => {
+      this.mainTitleService.setTitle(this.translate.instant('user-menu-preferences'));
+      this.mainTitleService.setSubTitle('');
+    }, 0);
   }
 
 // create form instance
