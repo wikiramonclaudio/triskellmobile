@@ -16,6 +16,8 @@
     "user-menu-preferences": "Preferencias",
     "user-menu-languages": "Idioma",
     "user-menu-favorites": "Favoritos",
+    "user-menu-files": "Ficheros",
+    "user-menu-comments": "Comentarios",
     "user-menu-subscription": "Subscripciones",
     "user-menu-lastModified": "Recientes",
     "user-menu-aboutTriskellSoftware": "Info sobre la app de Triskell",
@@ -24,5 +26,8 @@
     "user-menu-superSed": "Supersede a user",
     "user-menu-configurator": "Configurador",
     "main-menu-myItems": "Mis items",
-    "main-menu-timesheet": "Parte de horas"
+    "main-menu-timesheet": "Parte de horas",
+    "preferences-user-info": "Información de usuario",
+    "preferences-user-options": "Opciones de usuario",
+    "object-subitems-related": "Subitems and related"
 }
